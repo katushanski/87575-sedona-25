@@ -8,61 +8,55 @@
   <body>
 
 <header class="main-header">
-      <nav class="main-navigation">
-            <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-              <li><a href="news.html"></a>ФОТО И ВИДЕО</li>
-            </ul>
-            <a class="main-header-logo" href="index.html"><!--  ТЗ: Логотип не является пунктом меню. Его нужно размечать отдельным элементом. Значит ли это, что его нужно вынести из nav? -->
+        <nav class="main-navigation">
+            <a class="main-header-logo" href="index.html">
               <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
             </a>
-            <ul>
-              <li><a href="price.html"></a>КАРТА ШТАТА</li>
-              <li><a href="catalog.html">ГОСТИНИЦЫ</a></li>
+            <ul class="site-navigation-left">
+              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+              <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
+
+              <li><a href="map.html">КАРТА ШТАТА</a></li>
+              <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
           </ul>
         </nav>
-  <!-- Или альтернативный вариант: разделить на ПЯТЬ равных частей, и подогнать лого под "пустую" третью ячейку
-        <nav class="main-navigation">
-          <a class="main-header-logo" href="index.html">
-              <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
-            </a>
-            <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-              <li><a href="news.html"></a>ФОТО И ВИДЕО</li>
-              <li class="visually-hidden"></li>
-              <li><a href="price.html"></a>КАРТА ШТАТА</li>
-              <li><a href="catalog.html">ГОСТИНИЦЫ</a></li>
-          </ul>
-        </nav> -->
     </header>
 
 <main class="container">
   <section class="introduction">
     <figure class="introduction-image">
-      <!-- ЭТО ФОНОВОЕ ИЗОБРАЖЕНИЕ? ИЛИ КОНТЕНТНОЕ?!
-      ТЗ:Крупное фото: фотография занимает всю ширину, в её нижней части есть белая маска.-->
+      <!-- Таня, ты написала, что этот тег скорее всего не понадобится. Его нужно просто убрать? Заменить на что-то? Пока что оставить?
+      --ТЗ:Крупное фото: фотография занимает всю ширину, в её нижней части есть белая маска.-->
       <img src="#" height="500" width="240px" alt="Добро пожаловать в Седону">
     </figure>
     <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   </section>
 
-  <div class="city-description-left">
+  <div class="city-description">
     <h2>НАСТОЯЩИЙ ГОРОДОК</h2>
           <p>— №1 —</p>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          <img src="#" alt="Седона — настоящий городок">
+  </div>
+  <div class="city-options">
         <h3>ЖИЛЬЁ</h3>
+        <img src="#" alt="Жильё_иконка">
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         <h3>ЕДА</h3>
+        <img src="#" alt="Еда_иконка">
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         <h3>СУВЕНИРЫ</h3>
+        <img src="#" alt="Сувениры_иконка">
           <p>Не только китайского, но и местного производства!</p>
   </div>
-
-  <div class="city-description-right">
+  <div class="city-description">
     <h2>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <img src="#" alt="Мост дьявола">
+  </div>
+  <div>
         <h3>Небольшая площадь</h3>
           <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
@@ -75,9 +69,8 @@
   </div>
 
   <section class="hotel-search">
-    <h2 class="visually-hidden">Поиск гостиниц</h2>
-    <b>Заинтересовались?</b>
-          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+    <h2>Заинтересовались</h2>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <button class="hotel-search-field">Поиск гостиницы в Седоне</button>
       <!--ТЗ: По умолчанию форма поиска гостиницы должна быть открыта. -->
       <!-- <form action="/echo" method="post">
@@ -115,7 +108,5 @@
         </a>
     </section>
 </footer>
-
- <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
-  </body>
+</body>
 </html>

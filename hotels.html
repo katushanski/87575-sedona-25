@@ -8,36 +8,23 @@
   <body>
 
 <header class="main-header">
-      <nav class="main-navigation">
-            <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-              <li><a href="news.html"></a>ФОТО И ВИДЕО</li>
-            </ul>
-            <a class="main-header-logo" href="index.html"><!--  Логотип не является пунктом меню. Его нужно размечать отдельным элементом. Значит ли это, что его нужно вынести из nav? -->
+        <nav class="main-navigation">
+            <a class="main-header-logo" href="index.html">
               <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
             </a>
-            <ul>
-              <li><a href="price.html"></a>КАРТА ШТАТА</li>
-              <li class="site-navigation-current"><a href="catalog.html">ГОСТИНИЦЫ</a></li>
+            <ul class="site-navigation-left">
+              <li class=""><a href="info.html">ИНФОРМАЦИЯ</a></li>
+              <li class=""><a href="photo.html">ФОТО И ВИДЕО</a></li>
+
+              <li class=""><a href="map.html">КАРТА ШТАТА</a></li>
+              <li class=""><a href="hotels.html">ГОСТИНИЦЫ</a></li>
           </ul>
         </nav>
-  <!-- <nav class="main-navigation">
-          <a class="main-header-logo" href="index.html">
-              <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
-            </a>
-            <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-              <li><a href="news.html"></a>ФОТО И ВИДЕО</li>
-              <li class="visually-hidden"></li>
-              <li><a href="price.html"></a>КАРТА ШТАТА</li>
-              <li class="site-navigation-current"><a href="catalog.html">ГОСТИНИЦЫ</a></li>
-          </ul>
-        </nav> -->
-</header>
+    </header>
 
 <main class="container">
   <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
-  <!--<section class="search-preferences"> 
+  <!--<section class="search-preferences">
     <h2>Инфраструктура</h2>
       <h3><label for="swimming-pool-field">Бассейн</label></h3>
       <input type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
@@ -54,36 +41,29 @@
       <input type="checkbox" name="apartments" id="apartments-field" checked>
     <h2>Стоимость в сутки (&#x20bd;)</h2>
       Тут будет ползунок
-    <button class="show-hotels">Показать</button> 
+    <button class="show-hotels">Показать</button>
   </section>-->
-    
+
   <section class="search-results">
-    <nav class="user-navigation">
       <ul><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
         <li class="nav-item">Сортировка:</li>
-        <li class="nav-item">По цене</li>
-        <li class="nav-item">По типу</li>
-        <li class="nav-item">По рейтингу</li>
+        <li class="nav-item"><a href="#">По цене</a></li>
+        <li class="nav-item"><a href="#">По типу</a></li>
+        <li class="nav-item"><a href="#">По рейтингу</a></li>
       </ul>
-    <!-- Как добавить сортироку по уменьшению-возрастанию? -->
-    </nav>
+    <!-- Как добавить сортировку по уменьшению-возрастанию? -->
   </section>
-  <section class="search-results-list"
+  <section class="search-results-list">
     <div>
       <img src="img/hotel-amara.jpg" alt="Amara Resort and SPA">
       <p>Гостиница</p>
       <p>От 4000 &#x20bd;</p>
       <a class="details-button" href="#">Подробнее</a>
       <a class="booking-button" href="#">Забронировать</a>
-      <!-- Как выводить звезды? -->
+      <img src="#" alt="Количество звёзд" class="stars">
       <span>Рейтинг 8.5</span>
     </div>
-    <div>
-      
-    </div>
-    <div>
-      
-    </div>
+   <!--  Здесь будут другие гостиницы и апартаменты -->
   </section>
 </main>
 
