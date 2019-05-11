@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <!-- <link rel="stylesheet" href="outlines.css"> --> <!--привязка стилей-->
+  </head>
+  <body>
+
+<header class="main-header">
+      <nav class="main-navigation">
+            <ul class="site-navigation-left">
+              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+              <li><a href="news.html"></a>ФОТО И ВИДЕО</li>
+            </ul>
+            <a class="main-header-logo" href="index.html"><!--  Логотип не является пунктом меню. Его нужно размечать отдельным элементом. Значит ли это, что его нужно вынести из nav? -->
+              <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
+            </a>
+            <ul>
+              <li><a href="price.html"></a>КАРТА ШТАТА</li>
+              <li class="site-navigation-current"><a href="catalog.html">ГОСТИНИЦЫ</a></li>
+          </ul>
+        </nav>
+  <!-- <nav class="main-navigation">
+          <a class="main-header-logo" href="index.html">
+              <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
+            </a>
+            <ul class="site-navigation-left">
+              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+              <li><a href="news.html"></a>ФОТО И ВИДЕО</li>
+              <li class="visually-hidden"></li>
+              <li><a href="price.html"></a>КАРТА ШТАТА</li>
+              <li class="site-navigation-current"><a href="catalog.html">ГОСТИНИЦЫ</a></li>
+          </ul>
+        </nav> -->
+</header>
+
+<main class="container">
+  <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
+  <!--<section class="search-preferences"> 
+    <h2>Инфраструктура</h2>
+      <h3><label for="swimming-pool-field">Бассейн</label></h3>
+      <input type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
+      <h3><label for="parking-field">Парковка</label></h3>
+      <input type="checkbox" name="parking" id="parking-field">
+      <h3><label for="wifi-field">Wi-Fi</label></h3>
+      <input type="checkbox" name="wifi" id="wifi-field">
+    <h2>Тип жилья</h2>
+      <h3><label for="hotel-field">Гоститница</label></h3>
+      <input type="checkbox" name="hotel" id="hotel-field" checked>
+      <h3><label for="motel-field">Мотель</label></h3>
+      <input type="checkbox" name="motel" id="motel-field" checked>
+      <h3><label for="apartments-field">Апартаменты</label></h3>
+      <input type="checkbox" name="apartments" id="apartments-field" checked>
+    <h2>Стоимость в сутки (&#x20bd;)</h2>
+      Тут будет ползунок
+    <button class="show-hotels">Показать</button> 
+  </section>-->
+    
+  <section class="search-results">
+    <nav class="user-navigation">
+      <ul><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
+        <li class="nav-item">Сортировка:</li>
+        <li class="nav-item">По цене</li>
+        <li class="nav-item">По типу</li>
+        <li class="nav-item">По рейтингу</li>
+      </ul>
+    <!-- Как добавить сортироку по уменьшению-возрастанию? -->
+    </nav>
+  </section>
+  <section class="search-results-list"
+    <div>
+      <img src="img/hotel-amara.jpg" alt="Amara Resort and SPA">
+      <p>Гостиница</p>
+      <p>От 4000 &#x20bd;</p>
+      <a class="details-button" href="#">Подробнее</a>
+      <a class="booking-button" href="#">Забронировать</a>
+      <!-- Как выводить звезды? -->
+      <span>Рейтинг 8.5</span>
+    </div>
+    <div>
+      
+    </div>
+    <div>
+      
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>#visitsedona</span>
+
+    <div>
+      <ul>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+      </ul>
+    </div>
+
+    <section>
+     Website by
+        <a class="main-header-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="" width="" height="" alt="Логотип HTML Academy">
+        </a>
+    </section>
+</footer>
