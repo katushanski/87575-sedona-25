@@ -10,10 +10,10 @@
 <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo" href="index.html">
-              <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
+              <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
             </a>
             <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+              <li><a href="info.html">ИНФОРМАЦИЯ</a></li> <!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
               <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
 
               <li><a href="map.html">КАРТА ШТАТА</a></li>
@@ -25,9 +25,9 @@
 <main class="container">
   <section class="introduction">
     <figure class="introduction-image">
-      <!-- Таня, ты написала, что этот тег скорее всего не понадобится. Его нужно просто убрать? Заменить на что-то? Пока что оставить?
-      --ТЗ:Крупное фото: фотография занимает всю ширину, в её нижней части есть белая маска.-->
-      <img src="#" height="500" width="240px" alt="Добро пожаловать в Седону">
+      <img src="img/background_photo.jpg" width="1200px" height="500px" alt="Виды Седоны"> <!--На мой взгляд, эти три пункта img, как и другие фоновые изображения, должны быть прописаны в CSS в свойстве background-image: url("img/background_photo.jpg");-->
+      <img src="img/welcome.svg" width="459px" height="353px" alt="Добро пожаловать в Седону">
+      <img src="img/polygon.svg" width="1200px" height="59px" alt="Белая маска">
     </figure>
     <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -37,25 +37,28 @@
     <h2>НАСТОЯЩИЙ ГОРОДОК</h2>
           <p>— №1 —</p>
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          <img src="#" alt="Седона — настоящий городок">
+          <img src="img/city_description_1.jpg" alt="Седона — настоящий городок">
   </div>
+
   <div class="city-options">
         <h3>ЖИЛЬЁ</h3>
-        <img src="#" alt="Жильё_иконка">
+        <img src="img/icon-1.svg" width="75px" height="72px" alt="Жильё_иконка">
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         <h3>ЕДА</h3>
-        <img src="#" alt="Еда_иконка">
+        <img src="img/icon-2.svg" width="74px" height="70px" alt="Еда_иконка">
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         <h3>СУВЕНИРЫ</h3>
-        <img src="#" alt="Сувениры_иконка">
+        <img src="img/icon-3.svg" width="64px" height="76px" alt="Сувениры_иконка">
           <p>Не только китайского, но и местного производства!</p>
   </div>
+
   <div class="city-description">
     <h2>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          <img src="#" alt="Мост дьявола">
+          <img src="img/city_description_2.jpg" alt="Мост дьявола">
   </div>
+
   <div>
         <h3>Небольшая площадь</h3>
           <p>— №3 —</p>
@@ -69,42 +72,45 @@
   </div>
 
   <section class="hotel-search">
-    <h2>Заинтересовались</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+    <h2>Заинтересовались?</h2>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="hotel-search-field">Поиск гостиницы в Седоне</button>
-      <!--ТЗ: По умолчанию форма поиска гостиницы должна быть открыта. -->
+      <!--ТЗ: По умолчанию форма поиска гостиницы должна быть открыта. ОФОРМИТЬ ФОРМУ В FIELDSET. СГРУППИРОВАТЬ ПОЛЯ В <p>-->
       <!-- <form action="/echo" method="post">
-                <label for="arrival-date">Дата заезда</label>
-                <input type="text" id="arrival-date" name="arrival-date" value="">
-                <label for="departure-date">Пароль</label>
-                <input type="text" id="password" name="password">
+                <p>
+                  <label for="arrival-date">Дата заезда</label>
+                  <input type="date" id="arrival-date" name="arrival-date" value="2017-04-24">
+                </p>
+                <p>
+                  <label for="departure-date">Дата выезда</label>
+                  <input type="text" id="password" name="password" value="2017-06-04">
+                </p>
                 <label><input type="checkbox" name="allow">Разрешать гладить</label>
               <div class="search-button">
-                  <input type="submit" value="Найти">
+                  <input type="submit" name="search" id="search-button" value="Найти">
               </div>
             </form> -->
   </section>
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
-      <!--Тут будет карта-->
+      <img src="img/map.jpg" width="1200px" height="473px" alt="Карта">
   </section>
 </main>
 
 <footer>
   <span>#visitsedona</span>
 
-    <div>
+    <div class="buttons">
       <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-      </ul>
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Твиттер"></a></li>
+          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Фейсбук"></a></li>
+          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Ютуб"></a></li>
+      </ul> <!--Почему не отображаются иконки, когда я открываю файл в браузере?-->
     </div>
 
-    <section>
-     Website by
+    <section class="website-by">
         <a class="main-header-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="" width="" height="" alt="Логотип HTML Academy">
+          <img src="img/website_by.svg" width="200px" height="45px" alt="Логотип HTML Academy">
         </a>
     </section>
 </footer>

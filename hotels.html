@@ -10,14 +10,14 @@
 <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo" href="index.html">
-              <img src="img/index-logo" width="" height="" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
+              <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
             </a>
             <ul class="site-navigation-left">
-              <li class=""><a href="info.html">ИНФОРМАЦИЯ</a></li>
-              <li class=""><a href="photo.html">ФОТО И ВИДЕО</a></li>
+              <li><a href="info.html">ИНФОРМАЦИЯ</a></li> <!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
+              <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
 
-              <li class=""><a href="map.html">КАРТА ШТАТА</a></li>
-              <li class=""><a href="hotels.html">ГОСТИНИЦЫ</a></li>
+              <li><a href="map.html">КАРТА ШТАТА</a></li>
+              <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
           </ul>
         </nav>
     </header>
@@ -40,11 +40,11 @@
       <h3><label for="apartments-field">Апартаменты</label></h3>
       <input type="checkbox" name="apartments" id="apartments-field" checked>
     <h2>Стоимость в сутки (&#x20bd;)</h2>
-      Тут будет ползунок
+      <input type="range" min="0" max="3000" step="10">
     <button class="show-hotels">Показать</button>
   </section>-->
 
-  <section class="search-results">
+  <div class="search-results">
       <ul><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
         <li class="nav-item">Сортировка:</li>
         <li class="nav-item"><a href="#">По цене</a></li>
@@ -52,36 +52,55 @@
         <li class="nav-item"><a href="#">По рейтингу</a></li>
       </ul>
     <!-- Как добавить сортировку по уменьшению-возрастанию? -->
-  </section>
-  <section class="search-results-list">
+  </div>
+  <div class="search-results-list">
     <div>
-      <img src="img/hotel-amara.jpg" alt="Amara Resort and SPA">
+      <img src="img/amara_resort.jpg" alt="Amara Resort and SPA">
       <p>Гостиница</p>
       <p>От 4000 &#x20bd;</p>
       <a class="details-button" href="#">Подробнее</a>
       <a class="booking-button" href="#">Забронировать</a>
-      <img src="#" alt="Количество звёзд" class="stars">
+        <div class="rate rate1"><!--предлагаю вставить как повторяющийся элемент-->
+          <style>
+            .rate {
+              background-color: #ffffff;
+              background-repeat: repeat-x;
+            }
+            .rate1 {
+              height: 16px;
+              width: 96px;
+              background-image: url("star.svg");
+            }
+          </style>
+        </div>
+
+        <!--или как картинку:
+          <div class="rate">
+            <img src="img/stars4.svg" width="90px" height="16px">
+          </div>
+        -->
       <span>Рейтинг 8.5</span>
     </div>
    <!--  Здесь будут другие гостиницы и апартаменты -->
-  </section>
+  </div>
 </main>
 
 <footer>
   <span>#visitsedona</span>
 
-    <div>
+    <div class="buttons">
       <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-      </ul>
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Твиттер"></a></li>
+          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Фейсбук"></a></li>
+          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Ютуб"></a></li>
+      </ul> <!--Почему не отображаются иконки, когда я открываю файл в браузере?-->
     </div>
 
-    <section>
-     Website by
+    <section class="website-by">
         <a class="main-header-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="" width="" height="" alt="Логотип HTML Academy">
+          <img src="img/website_by.svg" width="200px" height="45px" alt="Логотип HTML Academy">
         </a>
     </section>
 </footer>
+</body>
+</html>
