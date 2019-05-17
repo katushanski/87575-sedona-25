@@ -3,19 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <!-- <link rel="stylesheet" href="outlines.css"> --> <!--привязка стилей,будет позже-->
+    <link rel="stylesheet" href="styles.css"> <!--привязка стилей,будет позже-->
   </head>
   <body>
 
 <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo" href="index.html">
-              <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
+              <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;">
             </a>
             <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li> <!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
-              <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
-
+              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+              <li><a href="photo.html">ФОТО И ВИДЕО</a></li><!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
               <li><a href="map.html">КАРТА ШТАТА</a></li>
               <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
           </ul>
@@ -74,38 +73,46 @@
   <section class="hotel-search">
     <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button class="hotel-search-field">Поиск гостиницы в Седоне</button>
-      <!--ТЗ: По умолчанию форма поиска гостиницы должна быть открыта. ОФОРМИТЬ ФОРМУ В FIELDSET. СГРУППИРОВАТЬ ПОЛЯ В <p>-->
-      <!-- <form action="/echo" method="post">
-                <p>
+        <button class="hotel-search-button">Поиск гостиницы в Седоне</button>
+      <!--ТЗ: По умолчанию форма поиска гостиницы должна быть открыта. Как этого добиться? Это делается в CSS?-->
+      <form class="hotel-search-field" action="#" method="get">
+              <fieldset>
+                <p><!--Нужно ли добавлять параграфам формы классы?-->
                   <label for="arrival-date">Дата заезда</label>
-                  <input type="date" id="arrival-date" name="arrival-date" value="2017-04-24">
+                  <input type="date" id="arrival-date" name="arrival-date" value="2017-04-24"><!--placeholder или value?-->
                 </p>
                 <p>
                   <label for="departure-date">Дата выезда</label>
-                  <input type="text" id="password" name="password" value="2017-06-04">
+                  <input type="text" id="password" name="password" value="2017-06-04"><!--placeholder или value?-->
                 </p>
-                <label><input type="checkbox" name="allow">Разрешать гладить</label>
+                <p>
+                  <label for="adults-number">Взрослые</label>
+                  <input type="number" min="0" max="99" step="1" id="adults-number" name="adults-number" value="2">
+                </p>
+                <p>
+                  <label for="children-number">Дети</label>
+                  <input type="number" min="0" max="99" step="1" id="children-number" name="adults-number" value="0"> <!--Можно ведь будет в CSS дооформить кнопки поля красиво? разместить их справа-слева, добавить иконки, верно? -->
+                </p>
+              </fieldset> <!--fieldset нужнно закрывать до или после кнопки?-->
               <div class="search-button">
                   <input type="submit" name="search" id="search-button" value="Найти">
               </div>
-            </form> -->
+            </form>
   </section>
   <section class="map">
     <h2 class="visually-hidden">Карта</h2>
-      <img src="img/map.jpg" width="1200px" height="473px" alt="Карта">
+      <img src="img/map.jpg" width="1200px" height="473px" alt="Местоположение Седоны на карте">
   </section>
 </main>
 
 <footer>
-  <span>#visitsedona</span>
-
-    <div class="buttons">
+  <span>#visitsedona</span> <!--Нужно ли добавлять к спанам описание? Интерактивный ли это элемент? ТЗ: Добавьте подписи ко всем интерактивным элементам: лейблы к полям форм, текст в кнопки и ссылки. Отметьте те подписи, которых нет на макете, классом visually-hidden.-->
+    <div class="footer-buttons">
       <ul>
-          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Твиттер"></a></li>
-          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Фейсбук"></a></li>
-          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Ютуб"></a></li>
-      </ul> <!--Почему не отображаются иконки, когда я открываю файл в браузере?-->
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Седона в Твиттере"></a></li>
+          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Седона на Фейсбуке"></a></li>
+          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Седона на Ютубе"></a></li>
+      </ul>
     </div>
 
     <section class="website-by">

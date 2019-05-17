@@ -8,41 +8,64 @@
   <body>
 
 <header class="main-header">
-        <nav class="main-navigation">
-            <a class="main-header-logo" href="index.html">
-              <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска жилья &quot;Седона&quot;">
-            </a>
-            <ul class="site-navigation-left">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li> <!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
-              <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
-
-              <li><a href="map.html">КАРТА ШТАТА</a></li>
-              <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
-          </ul>
-        </nav>
-    </header>
+  <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;">
+      </a>
+      <ul class="site-navigation-left">
+        <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+        <li><a href="photo.html">ФОТО И ВИДЕО</a></li><!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
+        <li><a href="map.html">КАРТА ШТАТА</a></li>
+        <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main class="container">
   <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
-  <!--<section class="search-preferences">
-    <h2>Инфраструктура</h2>
-      <h3><label for="swimming-pool-field">Бассейн</label></h3>
-      <input type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
-      <h3><label for="parking-field">Парковка</label></h3>
-      <input type="checkbox" name="parking" id="parking-field">
-      <h3><label for="wifi-field">Wi-Fi</label></h3>
-      <input type="checkbox" name="wifi" id="wifi-field">
-    <h2>Тип жилья</h2>
-      <h3><label for="hotel-field">Гоститница</label></h3>
-      <input type="checkbox" name="hotel" id="hotel-field" checked>
-      <h3><label for="motel-field">Мотель</label></h3>
-      <input type="checkbox" name="motel" id="motel-field" checked>
-      <h3><label for="apartments-field">Апартаменты</label></h3>
-      <input type="checkbox" name="apartments" id="apartments-field" checked>
-    <h2>Стоимость в сутки (&#x20bd;)</h2>
-      <input type="range" min="0" max="3000" step="10">
-    <button class="show-hotels">Показать</button>
-  </section>-->
+  <section class="search-preferences">
+    <form class="filter" method="get" action="#">
+    <fieldset>
+      <legend>Инфраструктура:</legend>
+        <ul>
+          <li class="option">
+            <input type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
+            <label for="swimming-pool-field">Бассейн</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="parking" id="parking-field">
+            <label for="parking-field">Парковка</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="wifi" id="wifi-field">
+            <label for="wifi-field">Wi-Fi</label>
+          </li>
+        </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Тип жилья:</legend>
+        <ul>
+          <li class="option">
+            <input type="checkbox" name="hotel" id="hotel-field" checked>
+            <label for="hotel-field">Гоститница</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="motel" id="motel-field" checked>
+            <label for="motel-field">Мотель</label>
+          </li>
+          <li class="option">
+            <input type="checkbox" name="apartments" id="apartments-field" checked>
+            <label for="apartments-field">Апартаменты</label>
+          </li>
+        </ul>
+    </fieldset>
+    <p>
+      <label for="priceperday">Стоимость в сутки (&#x20bd;)</label>
+      <input type="range" min="0" max="3000" step="10" name="priceperday" id="priceperday">
+    </p>
+    <button type="submit" class="show-hotels">Показать</button>
+    </form>
+  </section>
 
   <div class="search-results">
       <ul><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
@@ -73,12 +96,6 @@
             }
           </style>
         </div>
-
-        <!--или как картинку:
-          <div class="rate">
-            <img src="img/stars4.svg" width="90px" height="16px">
-          </div>
-        -->
       <span>Рейтинг 8.5</span>
     </div>
    <!--  Здесь будут другие гостиницы и апартаменты -->
@@ -86,14 +103,13 @@
 </main>
 
 <footer>
-  <span>#visitsedona</span>
-
-    <div class="buttons">
+  <span>#visitsedona</span> <!--Нужно ли добавлять к спанам описание? Интерактивный ли это элемент? ТЗ: Добавьте подписи ко всем интерактивным элементам: лейблы к полям форм, текст в кнопки и ссылки. Отметьте те подписи, которых нет на макете, классом visually-hidden.-->
+    <div class="footer-buttons">
       <ul>
-          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Твиттер"></a></li>
-          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Фейсбук"></a></li>
-          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Ютуб"></a></li>
-      </ul> <!--Почему не отображаются иконки, когда я открываю файл в браузере?-->
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Седона в Твиттере"></a></li>
+          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Седона на Фейсбуке"></a></li>
+          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Седона на Ютубе"></a></li>
+      </ul>
     </div>
 
     <section class="website-by">
