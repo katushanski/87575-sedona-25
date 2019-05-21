@@ -1,0 +1,328 @@
+/*
+Позиционирование
+Блочная модель
+Типографика
+Оформление
+*/
+
+html {
+  box-sizing: border-box;
+  border-box: inherit; /*Так вообще можно делать?*/
+}
+
+body {
+  width: 1200px;
+  height:
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-align: center;
+
+  background-color: #ffffff;
+  box-shadow: 0 10px 10px 0 #dbdbdb; /*как посмотреть параметры тени в макете?*/
+}
+
+header { /*нужны ли классы хедеру и футеру?*/
+  display: block;
+  width: 1200px;
+  height: 56px;
+  margin: 0px;
+  padding: 0px;
+
+  background-color: #ffffff;
+}
+
+/*=========================все кнопки=================================*/
+.hotel-search-button {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #766357;
+}
+
+.hotel-search-button:hover {
+  background-color: #766357;
+}
+
+.hotel-search-button:focus {
+  background-color: #604e43;
+}
+
+.hotel-search-button:active {
+  background-color: #503e33;
+  color: #857871;
+}
+
+.search-button {
+  background-color: #81b3d2;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: #669ec0;
+}
+
+.search-button:active {
+  background-color: #5496bd;
+  color: #88b6d1;
+}
+
+.social-button {
+  background-color: #81b3d2;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #669ec0;
+}
+
+.social-button:active {
+  background-color: #5496bd; /*как изменить на кнопке цвет векторного изображения поверх фона? */
+}
+/*======================================================================*/
+
+/*.visually-hidden {
+  пропишу позже
+}*/
+
+.main-logo {
+  position: center;
+  top: 0;
+}
+
+/*.main-navigation {
+у меня есть этот класс, но я не понимаю, нужно ли задавать ему стили. Если нет, может стоит удалить этот класс?
+}*/
+
+.site-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center; /*ТЗ: 3.4 Главное меню: четыре ячейки одинаковой ширины.
+  Для первых двух пунктов выравнивание текста по левому краю,
+  для двух последних — по правому.*/
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+.site-navigation li {
+  padding: 25px 0; /*Можно ли использовать сокращенную запись?*/
+  list-style: none;
+}
+
+.site-navigation a:hover {
+  color: #81b3d2;
+}
+
+.site-navigation a:focus {
+  color: #b2b2b2;
+}
+
+.site-navigation a:active {
+  color: #7f6d62;
+}
+
+.main-header-logo {
+  width: 140px;
+  height: 72px;
+  position: center;
+}
+
+.introduction /*опять-таки, нужно ли стилизовать этот класс? Если да, то я не пойму, что именно. Это section*/
+
+figure.introduction-image {
+  top: 159px;
+  left: 370px;
+
+  background-image:
+    url("img/welcome.svg"),
+    url("img/polygon.svg"),
+    url("img/background_photo.jpg");
+  background-size:
+    459px 353px,
+    1200px 59px,
+    1200px 800px;
+  background-position:
+    370px 132px,
+    0 506px,
+    0 -27px; /*расстояния считаются от родительского элемента или от body? */
+}
+
+.introduction h1 {
+  position: absolute;
+  left: 315.916px;
+  top: 650.662px;
+  /*width: 440px;
+  height: 48px;
+  z-index: 59;*/ /*нужно ли указывать z-index и позиционирование заголовков?*/
+
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+}
+
+.introduction p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  text-align: center;
+
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sedona-advantages {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  text-align: center;
+
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.sedona-advantages h2 { /*могу ли я прописывать селектор так? тег h2 - не дочерний элемент .sedona-advantages, а, скорее, внук :)*/
+  font-size: 21px;
+  font-weight:bold;
+
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.sedona-advantages h3 {
+  font-size: 21px;
+  font-weight: bold;
+
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.sedona-advantages p {
+  font-size: 14px;
+  font-weight: normal;
+
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.city-description p,
+.devil-bridge p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+
+  background-color: #81b3d2;
+  color: #ffffff;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+/*.city-description img {
+  position: absolute;
+  left: 400px;
+  top: 702px;
+}
+
+.devil-bridge img {
+  position: absolute;
+  left: 0;
+  top: 1290px;
+}*/
+
+/*==============================форма==================================*/
+.hotel-search {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.hotel-search h2 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hotel-search p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hotel-search-field {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  background-color: №f2f2f2;
+  border: none;
+}
+
+.hotel-search-field input {
+  font: inherit;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.hotel-search-field input:hover,
+.hotel-search-field input:focus {
+  background-color: #ebebeb;
+}
+
+
+.hotel-search-field input:active {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+
+/*======================================================================*/
+
+/*.map {
+  position: absolute;
+  left: 0;
+  top: 2169px;
+}*/
+
+footer {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #000000;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+span > footer { /*правильно ли я указала дочерний селектор?*/
+  font-size: 21px;
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+}

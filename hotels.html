@@ -3,16 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <!-- <link rel="stylesheet" href="outlines.css"> --> <!--привязка стилей-->
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+      <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
 <header class="main-header">
   <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
-        <img src="img/index-logo" width="140" height="72" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;">
+        <img src="img/logo.svg" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;" width="140" height="72">
       </a>
-      <ul class="site-navigation-left">
+      <ul class="site-navigation">
         <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
         <li><a href="photo.html">ФОТО И ВИДЕО</a></li><!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
         <li><a href="map.html">КАРТА ШТАТА</a></li>
@@ -75,10 +77,12 @@
         <li class="nav-item"><a href="#">По рейтингу</a></li>
       </ul>
     <!-- Как добавить сортировку по уменьшению-возрастанию? -->
+    <img src="icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
+    <img src="icon-down-dir.svg" alt="Сортировать по уменьшению" width="11" height="10">
   </div>
   <div class="search-results-list">
     <div>
-      <img src="img/amara_resort.jpg" alt="Amara Resort and SPA">
+      <img src="img/amara_resort.jpg" alt="Amara Resort and SPA" width="135" height="90">
       <p>Гостиница</p>
       <p>От 4000 &#x20bd;</p>
       <a class="details-button" href="#">Подробнее</a>
@@ -103,18 +107,18 @@
 </main>
 
 <footer>
-  <span>#visitsedona</span> <!--Нужно ли добавлять к спанам описание? Интерактивный ли это элемент? ТЗ: Добавьте подписи ко всем интерактивным элементам: лейблы к полям форм, текст в кнопки и ссылки. Отметьте те подписи, которых нет на макете, классом visually-hidden.-->
+  <span>#visitsedona</span>
     <div class="footer-buttons">
       <ul>
-          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="50px" height="50px" alt="Седона в Твиттере"></a></li>
-          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="50px" height="50px" alt="Седона на Фейсбуке"></a></li>
-          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="50px" height="50px" alt="Седона на Ютубе"></a></li>
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" alt="Седона в Твиттере" width="50" height="50"></a></li>
+          <li><a class="social-button" href="#"><img src="img/facebook.svg" alt="Седона на Фейсбуке" width="50" height="50"></a></li>
+          <li><a class="social-button" href="#"><img src="img/youtube.svg" alt="Седона на Ютубе" width="50" height="50"></a></li>
       </ul>
     </div>
 
     <section class="website-by">
         <a class="main-header-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/website_by.svg" width="200px" height="45px" alt="Логотип HTML Academy">
+          <img src="img/website_by.svg" alt="Логотип HTML Academy" width="200" height="45">
         </a>
     </section>
 </footer>
