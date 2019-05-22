@@ -24,11 +24,12 @@ body {
   text-align: center;
 
   background-color: #ffffff;
-  box-shadow: 0 10px 10px 0 #dbdbdb; /*как посмотреть параметры тени в макете?*/
+  box-shadow: 0 5px 15px 0 rgba (0, 0, 0, 0.8);
 }
 
-header { /*нужны ли классы хедеру и футеру?*/
+header {
   display: block;
+  position: relative;
   width: 1200px;
   height: 56px;
   margin: 0px;
@@ -68,6 +69,10 @@ header { /*нужны ли классы хедеру и футеру?*/
   background-color: #81b3d2;
 }
 
+.search-button input {
+  background-color: #81b3d2;
+}
+
 .search-button:hover,
 .search-button:focus {
   background-color: #669ec0;
@@ -88,7 +93,7 @@ header { /*нужны ли классы хедеру и футеру?*/
 }
 
 .social-button:active {
-  background-color: #5496bd; /*как изменить на кнопке цвет векторного изображения поверх фона? */
+  background-color: #5496bd;
 }
 /*======================================================================*/
 
@@ -97,13 +102,9 @@ header { /*нужны ли классы хедеру и футеру?*/
 }*/
 
 .main-logo {
-  position: center;
+  position: absolute;
   top: 0;
 }
-
-/*.main-navigation {
-у меня есть этот класс, но я не понимаю, нужно ли задавать ему стили. Если нет, может стоит удалить этот класс?
-}*/
 
 .site-navigation {
   font-size: 14px;
@@ -121,7 +122,7 @@ a {
   text-decoration: none;
 }
 .site-navigation li {
-  padding: 25px 0; /*Можно ли использовать сокращенную запись?*/
+  padding: 25px 0;
   list-style: none;
 }
 
@@ -143,7 +144,9 @@ a {
   position: center;
 }
 
-.introduction /*опять-таки, нужно ли стилизовать этот класс? Если да, то я не пойму, что именно. Это section*/
+.introduction {
+  position: relative;
+}
 
 figure.introduction-image {
   top: 159px;
@@ -157,10 +160,11 @@ figure.introduction-image {
     459px 353px,
     1200px 59px,
     1200px 800px;
+  position: absolute;
   background-position:
     370px 132px,
     0 506px,
-    0 -27px; /*расстояния считаются от родительского элемента или от body? */
+    0 -27px;
 }
 
 .introduction h1 {
@@ -199,7 +203,7 @@ figure.introduction-image {
   text-transform: uppercase;
 }
 
-.sedona-advantages h2 { /*могу ли я прописывать селектор так? тег h2 - не дочерний элемент .sedona-advantages, а, скорее, внук :)*/
+.sedona-advantages h2 {
   font-size: 21px;
   font-weight:bold;
 
@@ -318,11 +322,13 @@ footer {
   list-style: none;
 }
 
-span > footer { /*правильно ли я указала дочерний селектор?*/
+.visitsedona {
   font-size: 21px;
   font-weight: bold;
+  line-height: 26px;
 }
 
 footer a {
   text-decoration: none;
+  size: 50px 50px;
 }
