@@ -260,19 +260,7 @@ a {
   text-transform: uppercase;
 }
 
-.sedona-advantages ~ h2 {
-  padding: 15px 100px;
-  margin: 0;
-
-  line-height: 21px;
-  font-size: 21px;
-  font-weight: bold;
-
-  background-color: #81b3d2;
-  color: #ffffff;
-}
-
-.sedona-advantages ~ h3 {
+.sedona-advantages h3 {
   padding: 15px 100px;
   margin: 0;
 
@@ -312,6 +300,19 @@ a {
   list-style: none;
 }
 
+.city-description-text h2,
+.devil-bridge-text h2 {
+  padding: 15px 100px;
+  margin: 0;
+
+  line-height: 21px;
+  font-size: 21px;
+  font-weight: bold;
+
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
 /*.city-description-image img {
   position: absolute;
   left: 400px;
@@ -326,6 +327,7 @@ a {
 
 /*======================================форма==========================================*/
 .hotel-search {
+  border: none;
   background-color: #ffffff;
   color: #000000;
   box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.15);
@@ -359,7 +361,7 @@ a {
   line-height: 26px;
   text-transform: uppercase;
 
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   border: none;
 }
 
