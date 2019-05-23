@@ -23,11 +23,12 @@ body {
   text-align: center;
 
   background-color: #ffffff;
-  box-shadow: 0 5px 15px 0 rgba (0, 0, 0, 0.8);
+  box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 
-/*=========================все кнопки=================================*/
+/*=================================все кнопки=========================================*/
+
 .hotel-search-button {
   padding: 33px;
   margin: 35px 315px;
@@ -42,6 +43,7 @@ body {
   text-transform: uppercase;
 
   background-color: #766357;
+  border: none;
 }
 
 .hotel-search-button:hover {
@@ -69,7 +71,9 @@ body {
   color: #ffffff;
   vertical-align: middle;
   text-transform: uppercase;
+
   background-color: #81b3d2;
+  border: none;
 }
 
 .search-button input {
@@ -91,6 +95,7 @@ body {
   margin: 35px 3px;
 
   background-color: #81b3d2;
+  border: none;
 }
 
 .social-button:hover,
@@ -101,11 +106,13 @@ body {
 .social-button:active {
   background-color: #5496bd;
 }
-/*======================================================================*/
+/*======================================================================================*/
 
 /*.visually-hidden {
   пропишу позже
 }*/
+
+/*===================================шапка==============================================*/
 
 .main-navigation {
   display: block;
@@ -174,6 +181,7 @@ a {
   position: top center;
   top: 0;
 }
+/*======================================================================================*/
 
 .introduction {
   position: relative;
@@ -206,9 +214,9 @@ a {
 .introduction h1 {/*
   position: absolute;*/
   padding: 0px 350px;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-right: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-left: 0;
   /*width: 440px;
   height: 48px;
@@ -316,15 +324,16 @@ a {
   top: 1290px;
 }*/
 
-/*==============================форма==================================*/
+/*======================================форма==========================================*/
 .hotel-search {
   background-color: #ffffff;
   color: #000000;
+  box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hotel-search h2 {
   padding: 20px;
-  margin: 375px 375px;
+  margin: 0px 375px;
 
   line-height: 36px;
   font-size: 30px;
@@ -335,7 +344,7 @@ a {
 
 .hotel-search p {
   padding: 20px;
-  margin: 375px 375px;
+  margin: 0px 375px;
 
   line-height: 24px;
   font-size: 14px;
@@ -350,7 +359,7 @@ a {
   line-height: 26px;
   text-transform: uppercase;
 
-  background-color: №f2f2f2;
+  background-color: #f2f2f2;
   border: none;
 }
 
@@ -374,7 +383,7 @@ a {
 }
 
 
-/*======================================================================*/
+/*======================================================================================*/
 
 /*.map {
   position: absolute;
@@ -382,6 +391,122 @@ a {
   top: 2169px;
 }*/
 
+/*==============================внутренняя страница======================================*/
+
+.hotel-item {
+  padding: 30px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hotel-item h3 {
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: left;
+
+  color: #000000;
+}
+
+.hotel-item p {
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+
+  color: #000000;
+}
+
+.hotel-item span {
+  padding: 9px 16px;
+
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+
+  background-color: #f2f2f2;
+  color: #000000;
+}
+.details-button{ /*Перенести наверх ко всем кнопкам главной страницы? */
+  padding: 33px;
+  margin: 35px 315px;
+
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+  border: none;
+}
+.details-button:hover,
+.details-button:focus {
+  background-color: #669ec0;
+}
+
+.details-button:active{
+  background-color: #669ec0;
+  color: #88b6d1;
+}
+
+.booking-button { /*Перенести наверх ко всем кнопкам главной страницы? */
+  padding: 33px;
+  margin: 35px 315px;
+
+  line-height: 26px;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #766357;
+  border: none;
+}
+
+.booking-button:hover,
+.booking-button:focus {
+  background-color: #604e43;
+}
+
+.booking-button:active{
+  background-color: #503e33;
+  color: #857871;
+}
+
+.rate { /*как правильно прописать эти звезды в рейтинге? нужно ли для этого два класса, или один подойдет?*/
+  height: 17px;
+  background-color: #ffffff;
+}
+ .rate4 {
+  width: 94px;
+  background-image: url("img/star.svg");
+  background-repeat: repeat-x;
+}
+
+ .rate3 {
+  width: 94px;
+  background-image: url("img/star.svg");
+  background-repeat: repeat-x;
+}
+
+ .rate2 {
+  width: 94px;
+  background-image: url("img/star.svg");
+  background-repeat: repeat-x;
+}
+
+/*======================================================================================*/
+
+
+/*======================================футер==========================================*/
 footer {
   line-height: 26px;
   font-size: 14px;
@@ -401,5 +526,18 @@ footer {
 
 footer a {
   text-decoration: none;
-  size: 50px 50px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
+
+footer li {
+  list-style: none;
+}
+
+.footer-logo {
+  fill: #000000;
+}
+/*=====================================================================================*/

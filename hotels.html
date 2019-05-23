@@ -28,6 +28,7 @@
   <section class="search-preferences">
     <form class="filter" method="get" action="#">
     <fieldset>
+      <h2 class="visually-hidden">Параметры выбора жилья</h2>
       <legend>Инфраструктура:</legend>
         <ul>
           <li class="option">
@@ -70,6 +71,7 @@
   </section>
 
   <div class="search-results">
+    <h2 class="visually-hidden">Результаты поиска</h2>
       <ul><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
         <li class="nav-item">Сортировка:</li>
         <li class="nav-item"><a href="#">По цене</a></li>
@@ -81,24 +83,14 @@
     <img src="icon-down-dir.svg" alt="Сортировать по уменьшению" width="11" height="10">
   </div>
   <div class="search-results-list">
-    <div>
+    <div class="hotel-item">
       <img src="img/amara_resort.jpg" alt="Amara Resort and SPA" width="135" height="90">
-      <p>Гостиница</p>
-      <p>От 4000 &#x20bd;</p>
+      <h3>Amara Resort and SPA</h3>
+        <p>Гостиница</p>
+        <p>От 4000 &#x20bd;</p>
       <a class="details-button" href="#">Подробнее</a>
       <a class="booking-button" href="#">Забронировать</a>
-        <div class="rate rate1"><!--предлагаю вставить как повторяющийся элемент-->
-          <style>
-            .rate {
-              background-color: #ffffff;
-              background-repeat: repeat-x;
-            }
-            .rate1 {
-              height: 16px;
-              width: 96px;
-              background-image: url("star.svg");
-            }
-          </style>
+        <div class="rate rate4"><!-- вставила как повторяющийся элемент в CSS-->
         </div>
       <span>Рейтинг 8.5</span>
     </div>
@@ -110,14 +102,14 @@
   <span>#visitsedona</span>
     <div class="footer-buttons">
       <ul>
-          <li><a class="social-button" href="#"><img src="img/twitter.svg" alt="Седона в Твиттере" width="50" height="50"></a></li>
-          <li><a class="social-button" href="#"><img src="img/facebook.svg" alt="Седона на Фейсбуке" width="50" height="50"></a></li>
-          <li><a class="social-button" href="#"><img src="img/youtube.svg" alt="Седона на Ютубе" width="50" height="50"></a></li>
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" alt="Седона в Твиттере" width="25" height="25"></a></li>
+          <li><a class="social-button" href="#"><img src="img/facebook.svg" alt="Седона на Фейсбуке" width="25" height="25"></a></li>
+          <li><a class="social-button" href="#"><img src="img/youtube.svg" alt="Седона на Ютубе" width="25" height="25"></a></li>
       </ul>
     </div>
 
     <section class="website-by">
-        <a class="main-header-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/website_by.svg" alt="Логотип HTML Academy" width="200" height="45">
         </a>
     </section>
