@@ -91,10 +91,20 @@ body {
 }
 
 .social-button {
+  box-sizing: border-box;
+
   padding: 15px;
   margin: 35px 3px;
 
   background-color: #81b3d2;
+  background-image:
+    url("img/twitter.svg"),
+    url("img/facebook.svg"),
+    url("img/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  fill: #000000;
   border: none;
 }
 
@@ -118,7 +128,7 @@ body {
   display: block;
   position: relative;
   width: 1200px;
-  height: 56px;
+  /*height: 56px;*/
   margin: 0px;
   padding: 0px;
 
@@ -184,7 +194,7 @@ a {
 /*======================================================================================*/
 
 .introduction {
-  position: relative;
+  /*position: relative;*/
 }
 
 .introduction-image {/*
@@ -430,7 +440,9 @@ a {
   background-color: #f2f2f2;
   color: #000000;
 }
-.details-button{ /*Перенести наверх ко всем кнопкам главной страницы? */
+.details-button { /*Перенести наверх ко всем кнопкам главной страницы? */
+  display: inline-block;
+
   padding: 33px;
   margin: 35px 315px;
 
@@ -457,6 +469,8 @@ a {
 }
 
 .booking-button { /*Перенести наверх ко всем кнопкам главной страницы? */
+  display: inline-block;
+
   padding: 33px;
   margin: 35px 315px;
 
