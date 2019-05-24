@@ -29,9 +29,10 @@ body {
 
 /*=================================все кнопки=========================================*/
 
-.hotel-search-button {
+.open-form-button {
   padding: 33px;
   margin: 35px 315px;
+  width: 575px;
 
   line-height: 26px;
   font-size: 21px;
@@ -46,20 +47,20 @@ body {
   border: none;
 }
 
-.hotel-search-button:hover {
+.open-form-button:hover {
   background-color: #766357;
 }
 
-.hotel-search-button:focus {
+.open-form-button:focus {
   background-color: #604e43;
 }
 
-.hotel-search-button:active {
+.open-form-button:active {
   background-color: #503e33;
   color: #857871;
 }
 
-.search-button {
+button.search-button {
   padding: 18px 195px;
   margin: 55px;
 
@@ -390,30 +391,33 @@ figure.introduction-image {
   text-transform: uppercase;
 }
 
-.hotel-search-field {
+.hotel-search-form {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
   text-transform: uppercase;
 
   background-color: #ffffff;
+}
+
+.hotel-search-form fieldset {
   border: none;
 }
 
-.hotel-search-field input {
+.hotel-search-form input {
   font: inherit;
 
   background-color: #f2f2f2;
   border: none;
 }
 
-.hotel-search-field input:hover,
-.hotel-search-field input:focus {
+.hotel-search-form input:hover,
+.hotel-search-form input:focus {
   background-color: #ebebeb;
 }
 
 
-.hotel-search-field input:active {
+.hotel-search-form input:active {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   box-sizing: border-box;
@@ -468,8 +472,7 @@ figure.introduction-image {
 .details-button { /*Перенести наверх ко всем кнопкам главной страницы? */
   display: inline-block;
 
-  padding: 33px;
-  margin: 35px 315px;
+  padding: 7px 17px;
 
   line-height: 26px;
   font-size: 21px;
@@ -496,8 +499,7 @@ figure.introduction-image {
 .booking-button { /*Перенести наверх ко всем кнопкам главной страницы? */
   display: inline-block;
 
-  padding: 33px;
-  margin: 35px 315px;
+  padding: 7px 17px;
 
   line-height: 26px;
   font-size: 21px;
