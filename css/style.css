@@ -217,7 +217,7 @@ a {
 
 figure.introduction-image {
   width: auto;
-  height: 512px;
+  /*height: 512px;*/
 
   margin: 0;
   padding: 0;
