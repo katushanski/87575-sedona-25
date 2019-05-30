@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  width: 1200px;
+  width: 1280px;
   margin: 0;
   padding: 0;
 
@@ -23,7 +23,6 @@ body {
   text-align: center;
 
   background-color: #ffffff;
-  box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -145,19 +144,13 @@ button.search-button {
 
 .main-navigation {
   display: block;
-  position: relative;
   width: 1200px;
   /*height: 56px;*/
-  margin: 0px;
-  padding: 0px;
 
   background-color: #ffffff;
 }
 
 .site-navigation {
-  padding: 25px 70px;
-  margin: 0;
-
   line-height: 26px;
   font-size: 14px;
   font-weight: bold;
@@ -187,7 +180,7 @@ a {
 }
 
 .site-navigation li {
-  padding: 25px 70px;
+  padding: 25px 70px; /*дублируется с .site-navigation*/
   margin: 0;
   list-style: none;
 }
@@ -213,12 +206,12 @@ a {
 /*======================================================================================*/
 
 .introduction {
-  /*position: relative;*/
 }
 
 figure.introduction-image {
+  display: block;
   width: auto;
-  /*height: 512px;*/
+  height: 512px; /*могу ли я указывать здесь фиксированную высоту?*/
 
   margin: 0;
   padding: 0;
@@ -232,28 +225,36 @@ figure.introduction-image {
   position: absolute;*/
 }
 
-/*.introduction-image .sedona-img { ЧТО ЗДЕСЬ НЕ ТАК?
+.introduction-image .sedona-img { /*ЧТО ЗДЕСЬ НЕ ТАК?*/
   background-image: url("../img/background_photo.jpg");
-  background-size: 1200px 800px;
+  width: 1200px;
+  height: 800px;
 }
 
 .introduction-image .welcome-img {
   background-image: url("../img/welcome.svg");
-  background-size: 459px 353px;
+  width: 459px;
+  height: 353px;
+
 }
 
 .introduction-image .polygon-img {
   background-image: url("../img/polygon.svg");
-  background-size: 1200px 59px;
-}*/
+  width: 1200px;
+  height: 59px;
+}
+
+.intro-title {
+  margin: 58px auto;
+}
 
 .introduction h1 {/*
   position: absolute;*/
   padding: 0px 350px;
-  margin-top: 30px;
+  /*margin-top: 30px;
   margin-right: 0;
   margin-bottom: 30px;
-  margin-left: 0;
+  margin-left: 0;*/
   /*width: 440px;
   height: 48px;
   z-index: 59;*/ /*нужно ли указывать z-index и позиционирование заголовков?*/
@@ -269,10 +270,10 @@ figure.introduction-image {
 .introduction p {/*
   position: absolute;*/
   padding: 0px 350px;
-  margin-top: 0px;
+  /*margin-top: 0px;
   margin-right: 0;
   margin-bottom: 60px;
-  margin-left: 0;
+  margin-left: 0; */
 
   line-height: 26px;
   font-size: 14px;
@@ -309,8 +310,8 @@ figure.introduction-image {
 }
 
 .sedona-advantages ~ p {
-  padding: 15px 23px;
-  margin: 0;
+  /*padding: 15px 23px;
+  margin: 0;*/
 
   line-height: 21px;
   font-size: 14px;
@@ -322,8 +323,9 @@ figure.introduction-image {
 
 
 .city-description-text p,
-.devil-bridge-text p {
-  padding: 15px 23px;
+.devil-bridge-text p {/*
+  padding: 15px 23px;*/
+  padding: 0;
   margin: 0;
 
   line-height: 21px;
@@ -338,7 +340,10 @@ figure.introduction-image {
 
 .city-description-text h2,
 .devil-bridge-text h2 {
-  padding: 15px 100px;
+  /*padding: 15px 100px;
+  margin: 0;*/
+
+  padding: 0;
   margin: 0;
 
   line-height: 21px;
@@ -349,18 +354,6 @@ figure.introduction-image {
   color: #ffffff;
 }
 
-/*.city-description-image img {
-  position: absolute;
-  left: 400px;
-  top: 702px;
-}
-
-.devil-bridge-image img {
-  position: absolute;
-  left: 0;
-  top: 1290px;
-}*/
-
 /*======================================форма==========================================*/
 .hotel-search {
   border: none;
@@ -370,8 +363,8 @@ figure.introduction-image {
 }
 
 .hotel-search h2 {
-  padding: 20px;
-  margin: 0px 375px;
+  padding-top: 55px;
+  margin: 0;
 
   line-height: 36px;
   font-size: 30px;
@@ -381,8 +374,8 @@ figure.introduction-image {
 }
 
 .hotel-search p {
-  padding: 20px;
-  margin: 0px 375px;
+  padding-top: 35px;
+  margin: 0;
 
   line-height: 24px;
   font-size: 14px;
@@ -426,11 +419,17 @@ figure.introduction-image {
 
 /*======================================================================================*/
 
-/*.map {
+.map {
+  display: block;
+}
+
+.visually-hidden {
   position: absolute;
-  left: 0;
-  top: 2169px;
-}*/
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 
 /*==============================внутренняя страница======================================*/
 
@@ -546,9 +545,6 @@ figure.introduction-image {
   background-repeat: repeat-x;
 }
 
-/*======================================================================================*/
-
-
 /*======================================футер==========================================*/
 footer {
   line-height: 26px;
@@ -562,9 +558,12 @@ footer {
 }
 
 .visitsedona {
-  line-height: 26px;
   font-size: 21px;
   font-weight: bold;
+}
+
+.website-by {
+  font-weight: normal;
 }
 
 footer a {
@@ -578,11 +577,215 @@ footer a {
   text-decoration: none; /*как центрировать на кнопках векторные изображения?*/
 }
 
-footer li {
-  list-style: none; /*это нужно указывать ссылкам или элементам списка?*/
-}
-
 .footer-logo {
   fill: #000000; /*почему у меня логотип все равно невидимый?*/
 }
-/*=====================================================================================*/
+/*===================================флексы============================================*/
+.body-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
+
+}
+
+.main-header {
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation {
+  padding: 25px 70px;
+  margin: 0px;
+  border: 0;
+
+  list-style: none;
+}
+
+.site-navigation {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.site-navigation a {
+  list-style: none;
+  cursor: pointer;
+}
+
+.site-navigation li {
+  padding: 0;
+
+}
+
+.main-logo {
+  display: block;
+  width: 140px;
+  height: 72px;
+
+  margin: auto;
+}
+
+.city-description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #81b3d2;
+}
+
+.city-description-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 45px 60px;
+  margin: 0;
+
+  width: 400px;
+}
+
+.city-description-image img{
+  display: flex;
+  flex-grow: 3;
+
+  width: 800px;
+  padding: 0;
+  margin: 0;
+}
+
+.city-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+
+  width: 400px;
+  padding: 55px;
+  justify-content:  space-between;
+  margin: 0;
+
+  list-style: none;
+}
+
+.option-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 400px;
+
+  list-style: none;
+}
+
+
+
+.features-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.features-item {
+  width: 400px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.devil-bridge {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  background-color: #81b3d2;
+}
+
+.devil-bridge-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 45px 60px;
+  margin: 0;
+
+  width: 400px;
+}
+
+.devil-bridge-image img{
+  display: flex;
+  flex-grow: 3;
+
+  width: 800px;
+  padding: 0;
+  margin: 0;
+}
+
+.search-container .text {
+  display: block;
+  margin: 0 384px;
+ }
+
+.main-footer {
+  padding: 0 73px;
+  margin-top: 0;
+}
+
+.main-footer .containter {
+  display: flex;
+  flex-direction: row;/*
+  justify-content: space-between;*/
+
+  margin: 0;
+  padding: 0;
+}
+
+ .visitsedona {
+  box-sizing: border-box;
+  margin: 48px 45px;
+  padding: 0;
+  flex-grow: 1;
+
+  min-width: 400px;
+ }
+
+.footer-buttons ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  padding: auto;
+  margin: 0;
+  width: 400px;
+
+  list-style: none;
+}
+
+.footer-buttons li{
+  list-style: none;
+}
+
+.website-by {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  width: 400px;
+  padding: 40px auto;
+}
