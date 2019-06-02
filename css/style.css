@@ -25,6 +25,13 @@ body {
   background-color: #ffffff;
 }
 
+.body-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
+}
 
 /*=================================все кнопки=========================================*/
 
@@ -91,10 +98,15 @@ button.search-button {
 }
 
 .social-button {
+  display: inline-block;
   box-sizing: border-box;
 
-  padding: 15px;
-  margin: 35px 3px;
+  padding: 0 auto;
+  margin: 0 auto;
+  margin-right: 6px;
+
+  vertical-align: middle;
+  text-align: center;
 
   background-color: #81b3d2;
   background-repeat: no-repeat;
@@ -106,24 +118,18 @@ button.search-button {
   background-image:
     url("../img/twitter.svg");
   background-size: 25px 25px;
-
-  fill: #000000;
 }
 
 .fb {
   background-image:
     url("../img/facebook.svg");
   background-size: 25px 25px;
-
-  fill: #000000;
 }
 
 .youtube {
   background-image:
     url("../img/youtube.svg");
   background-size: 25px 25px;
-
-  fill: #000000;
 }
 
 .social-button:hover,
@@ -142,34 +148,65 @@ button.search-button {
 
 /*===================================шапка==============================================*/
 
+.main-header {
+  margin: 0;
+  padding: 0;
+}
+
 .main-navigation {
+  position: relative;
+
   display: block;
   width: 1200px;
-  /*height: 56px;*/
+  margin: 0px;
+  padding: 25px 70px;
+  box-sizing: border-box;
 
   background-color: #ffffff;
+  list-style: none;
+  border: 0;
 }
 
 .site-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+
   line-height: 26px;
   font-size: 14px;
   font-weight: bold;
   text-transform: capitalize;
-  text-align: center; /*ТЗ: 3.4 Главное меню: четыре ячейки одинаковой ширины.
-  Для первых двух пунктов выравнивание текста по левому краю,
-  для двух последних — по правому.*/
-
+  text-align: center;
   background-color: #ffffff;
 }
 
-a {
-  text-decoration: none;
+.site-navigation li {
+  width: 240px;
+  height: 18px; /*ничего, что я поставила фиксированную высоту? иначе у меня не подгонялась навигация под макет*/
+  margin: 0;
+  padding: 0;
+  border:0;
+
+  list-style: none;
 }
 
-.site-navigation a { /*дублируется с .site-navigation*/
-  padding: 25px 70px;
+.site-navigation li:first-child,
+.site-navigation li:nth-child(2)  {
+  text-align: left;
+}
+
+.site-navigation li:last-child,
+.site-navigation li:nth-child(3)  {
+  text-align: right;
+}
+
+.site-navigation a {
   margin: 0;
-  list-style: none;
+  padding: 0;
 
   line-height: 26px;
   font-size: 14px;
@@ -177,12 +214,10 @@ a {
   text-transform: capitalize;
   text-align: center;
   color: #000000;
-}
 
-.site-navigation li {
-  padding: 25px 70px; /*дублируется с .site-navigation*/
-  margin: 0;
+  cursor: pointer;
   list-style: none;
+  text-decoration: none;
 }
 
 .site-navigation a:hover {
@@ -198,17 +233,19 @@ a {
 }
 
 .main-logo {
+  position: absolute;
+  top: 0;
+  left: 528px;
+  z-index: 1;
+
+  display: block;
   width: 140px;
   height: 72px;
-  position: top center;
-  top: 0;
 }
 /*======================================================================================*/
 
-.introduction {
-}
-
-figure.introduction-image {
+.introduction-image {
+  position: relative;
   display: block;
   width: auto;
   height: 512px; /*могу ли я указывать здесь фиксированную высоту?*/
@@ -218,46 +255,65 @@ figure.introduction-image {
 
   background-color: #ffffff;
   background-repeat: no-repeat;
-  /*background-position:
-    370px 132px,
-    0 506px,
-    0 -27px;
-  position: absolute;*/
 }
 
-.introduction-image .sedona-img { /*ЧТО ЗДЕСЬ НЕ ТАК?*/
-  background-image: url("../img/background_photo.jpg");
+.sedona-img { /*ЧТО ЗДЕСЬ НЕ ТАК?*/
+  position: absolute;
+
   width: 1200px;
   height: 800px;
+
+  background-image: url("../img/background_photo.jpg");
+  background-repeat: no-repeat;
 }
 
-.introduction-image .welcome-img {
-  background-image: url("../img/welcome.svg");
+.welcome-img {
+  position: absolute;
+  top: 61px;
+  left: 365px;
+
   width: 459px;
   height: 353px;
 
+  background-image: url("../img/welcome.svg");
 }
 
-.introduction-image .polygon-img {
-  background-image: url("../img/polygon.svg");
+.polygon-img {
+  position: absolute;
+  bottom: 0px;
+
   width: 1200px;
   height: 59px;
+
+  background-image: url("../img/polygon.svg");
+}
+
+.intro-text {
+  position: absolute;
+
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
 }
 
 .intro-title {
-  margin: 58px auto;
+  position: relative;
+  z-index: 2;
+
+  width: 576px;
+
+  margin: 48px auto;
+  padding: 0;
+
+  background-color: #ffffff;
 }
 
-.introduction h1 {/*
-  position: absolute;*/
-  padding: 0px 350px;
-  /*margin-top: 30px;
-  margin-right: 0;
-  margin-bottom: 30px;
-  margin-left: 0;*/
-  /*width: 440px;
-  height: 48px;
-  z-index: 59;*/ /*нужно ли указывать z-index и позиционирование заголовков?*/
+.intro-title h1 {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  padding: 0px 42px;
 
   line-height: 26px;
   font-size: 21px;
@@ -265,15 +321,11 @@ figure.introduction-image {
   text-transform: uppercase;
   text-align: center;
   color: #000000;
+  background-color: #ffffff;
 }
 
-.introduction p {/*
-  position: absolute;*/
-  padding: 0px 350px;
-  /*margin-top: 0px;
-  margin-right: 0;
-  margin-bottom: 60px;
-  margin-left: 0; */
+.intro-title p {
+  margin-bottom: 10px;
 
   line-height: 26px;
   font-size: 14px;
@@ -281,10 +333,13 @@ figure.introduction-image {
   text-align: center;
 
   color: #000000;
+  background-color: #ffffff;
   text-transform: uppercase;
 }
 
 .sedona-advantages {
+  display: block;
+  z-index: 5;
   margin: 0;
   padding: 0;
 
@@ -310,9 +365,6 @@ figure.introduction-image {
 }
 
 .sedona-advantages ~ p {
-  /*padding: 15px 23px;
-  margin: 0;*/
-
   line-height: 21px;
   font-size: 14px;
   font-weight: normal;
@@ -321,11 +373,51 @@ figure.introduction-image {
   color: #000000;
 }
 
+.city-description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #81b3d2;
+}
+
+.city-description-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 45px 60px;
+  margin: 0;
+
+  width: 400px;
+}
+
+.devil-bridge {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  background-color: #81b3d2;
+}
+
+.devil-bridge-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 49px;
+  margin: 0;
+
+  width: 400px;
+}
 
 .city-description-text p,
-.devil-bridge-text p {/*
-  padding: 15px 23px;*/
-  padding: 0;
+.devil-bridge-text p {
+
   margin: 0;
 
   line-height: 21px;
@@ -340,11 +432,8 @@ figure.introduction-image {
 
 .city-description-text h2,
 .devil-bridge-text h2 {
-  /*padding: 15px 100px;
-  margin: 0;*/
-
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   line-height: 21px;
   font-size: 21px;
@@ -354,12 +443,92 @@ figure.introduction-image {
   color: #ffffff;
 }
 
+.city-description-image img{
+  display: flex;
+  flex-grow: 3;
+
+  width: 800px;
+  padding: 0;
+  margin: 0;
+}
+
+.devil-bridge-image img{
+  display: flex;
+  flex-grow: 3;
+
+  width: 800px;
+  padding: 0;
+  margin: 0;
+}
+
+.city-options {
+  display: flex;
+  flex-direction: row;
+
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 55px;
+
+  list-style: none;
+}
+
+.option-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 400px;
+
+  list-style: none;
+}
+
+.features-list {
+  display: flex;
+  margin: 0;
+  padding: 45px 0;
+
+  box-sizing: border-box;
+
+  list-style: none;
+  background-color: #eeeeee;
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 400px;
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0 15px;
+
+  background-color: #eeeeee;
+  list-style: none;
+}
+
+.features-item h3 {
+  margin-bottom: 15px;
+  background-color: #eeeeee;
+}
+
+.features-item p {
+  margin-bottom: 15px;
+  background-color: #eeeeee;
+}
+
 /*======================================форма==========================================*/
+.search-container .text {
+  display: block;
+  margin: 0 384px;
+ }
+
 .hotel-search {
   border: none;
   background-color: #ffffff;
   color: #000000;
-  box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hotel-search h2 {
@@ -369,7 +538,6 @@ figure.introduction-image {
   line-height: 36px;
   font-size: 30px;
   font-weight: bold;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -380,17 +548,22 @@ figure.introduction-image {
   line-height: 24px;
   font-size: 14px;
   font-weight: normal;
-  text-align: center;
   text-transform: uppercase;
 }
 
 .hotel-search-form {
+  position: relative;
+  left: 315px;
+  top: -50px;
+  display: block;
+  width: 575px;
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
   text-transform: uppercase;
 
   background-color: #ffffff;
+  box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .hotel-search-form fieldset {
@@ -416,10 +589,10 @@ figure.introduction-image {
   box-sizing: border-box;
 }
 
-
 /*======================================================================================*/
 
 .map {
+  position: relative;
   display: block;
 }
 
@@ -432,14 +605,107 @@ figure.introduction-image {
 }
 
 /*==============================внутренняя страница======================================*/
+.search-preferences {
+  height: 219px;
+  padding: 30px 73px;
+  box-sizing: border-box;
+
+  background-image: url("../img/background_photo.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;/*
+  -webkit-filter: blur(10px);
+  filter: blur(5px);*/
+}
+
+.infrastructure {
+  display: inline-block;
+  width: 241px;
+  text-align: left;
+}
+
+.accomodation {
+  display: inline-block;
+  width: 288px;
+}
+
+.infrastructure .list,
+.accomodation .list {
+  list-style: none;
+}
+
+.filter-range {
+  display: inline-block;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 73px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.search-results h2 {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.search-results .dir-icons {
+  margin: auto 0;
+  margin-left: auto;
+}
+
+ ul.sort-list {
+  margin: 0;
+}
+
+.sort-list li{
+  display: inline;
+
+  padding-left: 33px;
+
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  list-style: none;
+}
 
 .hotel-item {
-  padding: 30px;
-  margin: 0;
+  display: flex;
+  flex-direction: row;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid #e5e5e5;
   text-transform: uppercase;
 }
 
-.hotel-item h3 {
+.hotel-item img {
+  display: block;
+  padding-left: 73px;
+}
+
+.hotel-item a {
+  text-decoration: none;
+}
+
+.hotel-item-description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h3.hotel-item-title {
+  margin: 0;
+  margin-left: 30px;
+  margin-bottom: 11px;
+  padding: 0;
+
   line-height: 26px;
   font-size: 21px;
   font-weight: bold;
@@ -448,33 +714,42 @@ figure.introduction-image {
   color: #000000;
 }
 
-.hotel-item p {
-  line-height: 21px;
-  font-size: 14px;
-  font-weight: normal;
+.hotel-item-buttons {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0;
+  margin-left: 30px;
+  margin-bottom: 11px;
+  padding: 0;
+}
+
+.hotel-details {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-details p {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+
   text-align: left;
-
-  color: #000000;
 }
 
-.hotel-item span {
-  padding: 9px 16px;
-
-  line-height: 21px;
-  font-size: 14px;
-  font-weight: normal;
-  text-align: center;
-
-  background-color: #f2f2f2;
-  color: #000000;
-}
-.details-button { /*Перенести наверх ко всем кнопкам главной страницы? */
+ .button-details { /*Перенести наверх ко всем кнопкам главной страницы? */
   display: inline-block;
 
-  padding: 7px 17px;
+  padding: 7px 11px;
 
-  line-height: 26px;
-  font-size: 21px;
+  line-height: 21px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
 
@@ -485,23 +760,36 @@ figure.introduction-image {
   background-color: #81b3d2;
   border: none;
 }
-.details-button:hover,
-.details-button:focus {
+.button-details:hover,
+.button-details:focus {
   background-color: #669ec0;
 }
 
-.details-button:active{
+.button-details:active{
   background-color: #669ec0;
   color: #88b6d1;
 }
 
-.booking-button { /*Перенести наверх ко всем кнопкам главной страницы? */
+.hotel-price-book {
+  margin-left: 5px;
+  padding: 0;
+}
+
+.hotel-price-book p {
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 0;
+
+  text-align: left;
+}
+
+.button-booking { /*Перенести наверх ко всем кнопкам главной страницы? */
   display: inline-block;
 
-  padding: 7px 17px;
+  padding: 7px 11px;
 
-  line-height: 26px;
-  font-size: 21px;
+  line-height: 21px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
 
@@ -513,40 +801,46 @@ figure.introduction-image {
   border: none;
 }
 
-.booking-button:hover,
-.booking-button:focus {
+.button-booking:hover,
+.button-booking:focus {
   background-color: #604e43;
 }
 
-.booking-button:active{
+.button-booking:active{
   background-color: #503e33;
   color: #857871;
 }
 
-.rate { /*как правильно прописать эти звезды в рейтинге? нужно ли для этого два класса, или один подойдет?*/
-  height: 17px;
-  background-color: #ffffff;
-}
- .rate4 {
-  width: 94px;
-  background-image: url("img/star.svg");
-  background-repeat: repeat-x;
+.hotel-rate {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 73px;
 }
 
- .rate3 {
-  width: 94px;
-  background-image: url("img/star.svg");
-  background-repeat: repeat-x;
+.hotel-rate span {
+  padding: 9px 16px;
+
+  line-height: 21px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+
+  background-color: #f2f2f2;
+  color: #000000;
 }
 
- .rate2 {
-  width: 94px;
-  background-image: url("img/star.svg");
-  background-repeat: repeat-x;
+.hotel-rate .list li {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 
 /*======================================футер==========================================*/
-footer {
+.main-footer {
+  padding: 0 73px;
+  margin-top: 0;
+
   line-height: 26px;
   font-size: 14px;
   font-weight: normal;
@@ -557,192 +851,8 @@ footer {
   list-style: none;
 }
 
-.visitsedona {
-  font-size: 21px;
-  font-weight: bold;
-}
-
-.website-by {
-  font-weight: normal;
-}
-
-footer a {
+.main-footer a {
   display: block;
-  width: 48px;
-  height: 48px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-
-  list-style: none;
-  text-decoration: none; /*как центрировать на кнопках векторные изображения?*/
-}
-
-.footer-logo {
-  fill: #000000; /*почему у меня логотип все равно невидимый?*/
-}
-/*===================================флексы============================================*/
-.body-wrapper {
-  width: 1200px;
-  margin: 0 auto;
-
-  background-color: #ffffff;
-  box-shadow: -5px 0px 15px 0px rgba(0, 0, 0, 0.2);
-
-}
-
-.main-header {
-  margin: 0;
-  padding: 0;
-}
-
-.main-navigation {
-  padding: 25px 70px;
-  margin: 0px;
-  border: 0;
-
-  list-style: none;
-}
-
-.site-navigation {
-  padding: 0;
-  margin: 0;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.site-navigation a {
-  list-style: none;
-  cursor: pointer;
-}
-
-.site-navigation li {
-  padding: 0;
-
-}
-
-.main-logo {
-  display: block;
-  width: 140px;
-  height: 72px;
-
-  margin: auto;
-}
-
-.city-description {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #81b3d2;
-}
-
-.city-description-text {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-
-  padding: 45px 60px;
-  margin: 0;
-
-  width: 400px;
-}
-
-.city-description-image img{
-  display: flex;
-  flex-grow: 3;
-
-  width: 800px;
-  padding: 0;
-  margin: 0;
-}
-
-.city-options {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  box-sizing: border-box;
-
-  width: 400px;
-  padding: 55px;
-  justify-content:  space-between;
-  margin: 0;
-
-  list-style: none;
-}
-
-.option-items {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  width: 400px;
-
-  list-style: none;
-}
-
-
-
-.features-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  padding: 0;
-
-  list-style: none;
-}
-
-.features-item {
-  width: 400px;
-  padding: 0;
-
-  list-style: none;
-}
-
-.devil-bridge {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  background-color: #81b3d2;
-}
-
-.devil-bridge-text {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-
-  padding: 45px 60px;
-  margin: 0;
-
-  width: 400px;
-}
-
-.devil-bridge-image img{
-  display: flex;
-  flex-grow: 3;
-
-  width: 800px;
-  padding: 0;
-  margin: 0;
-}
-
-.search-container .text {
-  display: block;
-  margin: 0 384px;
- }
-
-.main-footer {
-  padding: 0 73px;
-  margin-top: 0;
 }
 
 .main-footer .containter {
@@ -754,38 +864,65 @@ footer a {
   padding: 0;
 }
 
- .visitsedona {
-  box-sizing: border-box;
-  margin: 48px 45px;
-  padding: 0;
+.visitsedona {
   flex-grow: 1;
 
-  min-width: 400px;
+  margin: 48px 0;
+  padding: 0;
+
+  min-width: 328px;
+  box-sizing: border-box;
+
+  font-size: 21px;
+  font-weight: bold;
  }
 
-.footer-buttons ul{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 1;
-
-  padding: auto;
+.footer-buttons {
+  padding: 0;
   margin: 0;
   width: 400px;
 
   list-style: none;
 }
 
-.footer-buttons li{
+.footer-buttons li {
+  display: inline-block;
   list-style: none;
 }
 
-.website-by {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-grow: 1;
+.footer-buttons a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 36px 0;
 
-  width: 400px;
-  padding: 40px auto;
+  list-style: none;
+  text-decoration: none;
 }
+
+.website-by {
+  width: 328px;
+  margin: 40px auto;
+}
+
+.website-by span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  box-sizing: inherit;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+a.footer-logo,
+.footer-logo img {
+  display: inline-block;
+  width: 115px;
+
+  vertical-align: middle;
+
+  fill: #000000;
+}
+
+

@@ -8,29 +8,30 @@
       <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+  <div class="body-wrapper">
 
 <header class="main-header">
   <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo.svg" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;" width="140" height="72">
-      </a>
-      <ul class="site-navigation">
-        <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-        <li><a href="photo.html">ФОТО И ВИДЕО</a></li><!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
-        <li><a href="map.html">КАРТА ШТАТА</a></li>
-        <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
+    <a class="main-logo" href="index.html">
+      <img src="img/logo.svg" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;" width="140" height="72">
+    </a>
+    <ul class="site-navigation">
+      <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+      <li><a href="photo.html">ФОТО И ВИДЕО</a></li><!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
+      <li><a href="map.html">КАРТА ШТАТА</a></li>
+      <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="container">
+<main class="inner-page">
   <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
   <section class="search-preferences">
     <form class="filter" method="get" action="#">
-    <fieldset>
+    <fieldset class="infrastructure">
       <h2 class="visually-hidden">Параметры выбора жилья</h2>
       <legend>Инфраструктура:</legend>
-        <ul>
+        <ul class="infrastructure list">
           <li class="option">
             <input type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
             <label for="swimming-pool-field">Бассейн</label>
@@ -45,9 +46,9 @@
           </li>
         </ul>
     </fieldset>
-    <fieldset>
+    <fieldset class="accomodation">
       <legend>Тип жилья:</legend>
-        <ul>
+        <ul class="accomodation list">
           <li class="option">
             <input type="checkbox" name="hotel" id="hotel-field" checked>
             <label for="hotel-field">Гоститница</label>
@@ -62,58 +63,139 @@
           </li>
         </ul>
     </fieldset>
-    <p>
+    <div class="filter-range">
       <label for="priceperday">Стоимость в сутки (&#x20bd;)</label>
       <input type="range" min="0" max="3000" step="10" name="priceperday" id="priceperday">
-    </p>
-    <button type="submit" class="show-hotels">Показать</button>
+    </div>
+    <button class="show-hotels" type="submit">Показать</button>
     </form>
   </section>
 
-  <div class="search-results">
-    <h2 class="visually-hidden">Результаты поиска</h2>
-      <ul><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
-        <li class="nav-item">Сортировка:</li>
-        <li class="nav-item"><a href="#">По цене</a></li>
-        <li class="nav-item"><a href="#">По типу</a></li>
-        <li class="nav-item"><a href="#">По рейтингу</a></li>
+  <section class="search-results">
+    <h2>Найдено: 3</h2>
+      <ul class="sort-list"><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
+        <li class="sort-item">Сортировка: </li>
+        <li class="sort-item"><a href="#">По цене</a></li>
+        <li class="sort-item"><a href="#">По типу</a></li>
+        <li class="sort-item"><a href="#">По рейтингу</a></li>
       </ul>
-    <!-- Как добавить сортировку по уменьшению-возрастанию? -->
-    <img src="icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
-    <img src="icon-down-dir.svg" alt="Сортировать по уменьшению" width="11" height="10">
-  </div>
-  <div class="search-results-list">
-    <div class="hotel-item">
-      <img src="img/amara_resort.jpg" alt="Amara Resort and SPA" width="135" height="90">
-      <h3>Amara Resort and SPA</h3>
-        <p>Гостиница</p>
-        <p>От 4000 &#x20bd;</p>
-      <a class="details-button" href="#">Подробнее</a>
-      <a class="booking-button" href="#">Забронировать</a>
-        <div class="rate rate4"><!-- вставила как повторяющийся элемент в CSS-->
-        </div>
-      <span>Рейтинг 8.5</span>
+    <div class="dir-icons">
+      <img src="img/icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
+      <img src="img/icon-down-dir.svg" alt="Сортировать по уменьшению" width="11" height="10">
     </div>
-   <!--  Здесь будут другие гостиницы и апартаменты -->
+  </section>
+
+  <div class="search-results-list">
+    <section class="hotel-item">
+     <img src="img/amara_resort.jpg" alt="Amara Resort and SPA" width="135" height="90">
+
+      <div class="hotel-item-description">
+       <h3 class="hotel-item-title">Amara Resort & SPA</h3>
+
+       <div class="hotel-item-buttons">
+          <div class="hotel-details">
+            <p>Гостиница</p>
+            <a class="button-details" href="#">Подробнее</a>
+          </div>
+
+          <div class="hotel-price-book">
+            <p>От 4000 &#x20bd;</p>
+            <a class="button-booking" href="#">Забронировать</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="hotel-rate">
+    <ul class="hotel-rate list">
+       <li class="hotel-rate-star"></li>
+       <li class="hotel-rate-star"></li>
+       <li class="hotel-rate-star"></li>
+       <li class="hotel-rate-star"></li>
+   </ul>
+  <span>Рейтинг 8.5</span>
+  </div>
+</section>
+
+<section class="hotel-item">
+     <img src="img/desert_quail_inn.jpg" alt="Desert Quail Inn" width="135" height="90">
+
+      <div class="hotel-item-description">
+       <h3 class="hotel-item-title">Desert Quail Inn</h3>
+
+       <div class="hotel-item-buttons">
+          <div class="hotel-details">
+            <p>Мотель</p>
+            <a class="button-details" href="#">Подробнее</a>
+          </div>
+
+          <div class="hotel-price-book">
+            <p>От 3000 &#x20bd;</p>
+            <a class="button-booking" href="#">Забронировать</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="hotel-rate">
+    <ul class="hotel-rate list">
+       <li class="hotel-rate-star"></li>
+       <li class="hotel-rate-star"></li>
+       <li class="hotel-rate-star"></li>
+   </ul>
+  <span>Рейтинг 8.9</span>
+  </div>
+</section>
+
+<section class="hotel-item">
+     <img src="img/villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
+
+      <div class="hotel-item-description">
+       <h3 class="hotel-item-title">Villas at Poco Diablo</h3>
+
+       <div class="hotel-item-buttons">
+          <div class="hotel-details">
+            <p>Апартаменты</p>
+            <a class="button-details" href="#">Подробнее</a>
+          </div>
+
+          <div class="hotel-price-book">
+            <p>От 2000 &#x20bd;</p>
+            <a class="button-booking" href="#">Забронировать</a>
+          </div>
+        </div>
+      </div>
+
+    <div class="hotel-rate">
+    <ul class="hotel-rate list">
+       <li class="hotel-rate-star"></li>
+       <li class="hotel-rate-star"></li>
+   </ul>
+  <span>Рейтинг 9.2</span>
+  </div>
+</section>
+
   </div>
 </main>
 
-<footer>
-  <span class="visitsedona">#visitsedona</span>
+<footer class="main-footer">
+  <div class="containter">
+    <span class="visitsedona">#visitsedona</span>
+
     <div class="footer-buttons">
-      <ul>
-          <li><a class="social-button twitter" href="#"><!-- <img src="img/twitter.svg" alt="Седона в Твиттере" width="25" height="25"> --></a></li>
-          <li><a class="social-button fb" href="#"><!-- <img src="img/facebook.svg" alt="Седона на Фейсбуке" width="25" height="25"> --></a></li>
-          <li><a class="social-button youtube" href="#"><!-- <img src="img/youtube.svg" alt="Седона на Ютубе" width="25" height="25"> --></a></li>
+      <ul class="footer-buttons">
+          <li><a class="social-button twitter" href="#"></a></li>
+          <li><a class="social-button fb" href="#"></a></li>
+          <li><a class="social-button youtube" href="#"></a></li>
       </ul>
     </div>
 
-    <section class="website-by">
-        <p>WEBSITE BY</p>
+    <div class="website-by">
+        <span>Website by</span>
         <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/website_by.svg" alt="Логотип HTML Academy" width="200" height="45">
         </a>
-    </section>
+    </div>
+
+  </div>
 </footer>
 </body>
 </html>

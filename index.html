@@ -15,7 +15,6 @@
             <ul class="site-navigation">
               <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
               <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
-              <li></li><!--ТЗ 3.4: Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
               <li><a href="map.html">КАРТА ШТАТА</a></li>
               <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
             </ul>
@@ -26,12 +25,12 @@
     </header>
 
 <main class="container"> <!--ДУМАЮ, СТОИТ УБРАТЬ ЭТОТ КЛАСС-->
-  <section class="introduction">
-    <figure class="introduction-image">
+  <section class="introduction-image">
       <div class="sedona-img"></div>
       <div class="welcome-img"></div>
       <div class="polygon-img"></div>
-    </figure>
+  </section>
+  <section class="intro-text">
     <div class="intro-title">
       <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -50,7 +49,7 @@
       </div>
     </div>
 
-    <div class="features-list">
+    <div class="features">
       <ul class="city-options">
       <li option-items>
         <img src="img/icon-1.svg" alt="Жильё иконка" width="75" height="72">
@@ -72,11 +71,11 @@
 
   <div class="devil-bridge">
     <div class="devil-bridge-text">
-      <h2>ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h2>
+      <h2>ТАМ ЕСТЬ<br/> МОСТ ДЬЯВОЛА</h2>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
-    <div class="devil-image">
+    <div class="devil-bridge-image">
       <img src="img/city_description_2.jpg" alt="Мост дьявола" width="800" height="256">
     </div>
   </div>
@@ -84,18 +83,18 @@
   <ul class="features-list">
     <li class="features-item">
         <h3>Небольшая площадь</h3>
-          <p>— №3 —</p>
-          <p>Все достопримечательности находятся очень близко</p>
+        <p>— №3 —</p>
+        <p>Все достопримечательности находятся очень близко</p>
     </li>
     <li class="features-item">
         <h3>Красивая дорога</h3>
-          <p>— №4 —</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <p>— №4 —</p>
+        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
     </li class="features-item">
     <li class="features-item">
         <h3>Мало туристов</h3>
-          <p>— №5 —</p>
-          <p>Большинство едет в гранд каньон и толпится там</p>
+        <p>— №5 —</p>
+        <p>Большинство едет в гранд каньон и толпится там</p>
     </li>
   </ul>
   </section>
@@ -151,7 +150,7 @@
     </div>
 
     <div class="website-by">
-        <p>WEBSITE BY</p>
+        <span>Website by</span>
         <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/website_by.svg" alt="Логотип HTML Academy" width="200" height="45">
         </a>
