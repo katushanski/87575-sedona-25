@@ -26,49 +26,58 @@
 
 <main class="inner-page">
   <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
+
   <section class="search-preferences">
     <form class="filter" method="get" action="#">
+
+    <div class="filter-form-container">
+
     <fieldset class="infrastructure">
       <h2 class="visually-hidden">Параметры выбора жилья</h2>
       <legend>Инфраструктура:</legend>
         <ul class="infrastructure list">
           <li class="option">
-            <input type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
+            <input class="checkbox" type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
             <label for="swimming-pool-field">Бассейн</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="parking" id="parking-field">
+            <input class="checkbox" type="checkbox" name="parking" id="parking-field">
             <label for="parking-field">Парковка</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="wifi" id="wifi-field">
+            <input class="checkbox" type="checkbox" name="wifi" id="wifi-field">
             <label for="wifi-field">Wi-Fi</label>
           </li>
         </ul>
     </fieldset>
+
     <fieldset class="accomodation">
       <legend>Тип жилья:</legend>
         <ul class="accomodation list">
           <li class="option">
-            <input type="checkbox" name="hotel" id="hotel-field" checked>
-            <label for="hotel-field">Гоститница</label>
+            <input class="checkbox" type="checkbox" name="hotel" id="hotel-field" checked>
+            <label for="hotel-field">Гостиница</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="motel" id="motel-field" checked>
+            <input class="checkbox" type="checkbox" name="motel" id="motel-field" checked>
             <label for="motel-field">Мотель</label>
           </li>
           <li class="option">
-            <input type="checkbox" name="apartments" id="apartments-field" checked>
+            <input class="checkbox" type="checkbox" name="apartments" id="apartments-field" checked>
             <label for="apartments-field">Апартаменты</label>
           </li>
         </ul>
     </fieldset>
+
     <div class="filter-range">
       <label for="priceperday">Стоимость в сутки (&#x20bd;)</label>
       <input type="range" min="0" max="3000" step="10" name="priceperday" id="priceperday">
+
+      <button class="show-hotels" type="submit">Показать</button>
     </div>
-    <button class="show-hotels" type="submit">Показать</button>
-    </form>
+
+  </div>
+  </form>
   </section>
 
   <section class="search-results">
@@ -90,7 +99,7 @@
      <img src="img/amara_resort.jpg" alt="Amara Resort and SPA" width="135" height="90">
 
       <div class="hotel-item-description">
-       <h3 class="hotel-item-title">Amara Resort & SPA</h3>
+       <h3 class="hotel-item-title"><a href="#">Amara Resort & SPA</a></h3>
 
        <div class="hotel-item-buttons">
           <div class="hotel-details">
@@ -120,7 +129,7 @@
      <img src="img/desert_quail_inn.jpg" alt="Desert Quail Inn" width="135" height="90">
 
       <div class="hotel-item-description">
-       <h3 class="hotel-item-title">Desert Quail Inn</h3>
+       <h3 class="hotel-item-title"><a href="#">Desert Quail Inn</a></h3>
 
        <div class="hotel-item-buttons">
           <div class="hotel-details">
@@ -149,7 +158,7 @@
      <img src="img/villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
 
       <div class="hotel-item-description">
-       <h3 class="hotel-item-title">Villas at Poco Diablo</h3>
+       <h3 class="hotel-item-title"><a href="#">Villas at Poco Diablo</a></h3>
 
        <div class="hotel-item-buttons">
           <div class="hotel-details">
