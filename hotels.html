@@ -17,9 +17,9 @@
     </a>
     <ul class="site-navigation">
       <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-      <li><a href="photo.html">ФОТО И ВИДЕО</a></li><!--Главное меню: четыре ячейки одинаковой ширины. Для первых двух пунктов выравнивание текста по левому краю, для двух последних — по правому.-->
+      <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
       <li><a href="map.html">КАРТА ШТАТА</a></li>
-      <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
+      <li><a class="active" href="hotels.html">ГОСТИНИЦЫ</a></li>
     </ul>
   </nav>
 </header>
@@ -28,6 +28,7 @@
   <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
 
   <section class="search-preferences">
+    <div class="search-preferences-background"></div>
     <form class="filter" method="get" action="#">
 
     <div class="filter-form-container">
@@ -35,7 +36,7 @@
     <fieldset class="infrastructure">
       <h2 class="visually-hidden">Параметры выбора жилья</h2>
       <legend>Инфраструктура:</legend>
-        <ul class="infrastructure list">
+        <ul class="infrastructure-list">
           <li class="option">
             <input class="checkbox" type="checkbox" name="swimming-pool" id="swimming-pool-field" checked>
             <label for="swimming-pool-field">Бассейн</label>
@@ -53,7 +54,7 @@
 
     <fieldset class="accomodation">
       <legend>Тип жилья:</legend>
-        <ul class="accomodation list">
+        <ul class="accomodation-list">
           <li class="option">
             <input class="checkbox" type="checkbox" name="hotel" id="hotel-field" checked>
             <label for="hotel-field">Гостиница</label>
@@ -70,10 +71,22 @@
     </fieldset>
 
     <div class="filter-range">
-      <label for="priceperday">Стоимость в сутки (&#x20bd;)</label>
-      <input type="range" min="0" max="3000" step="10" name="priceperday" id="priceperday">
+      <span class="filter-range-title">Стоимость в сутки (&#x20bd;)</span>
 
-      <button class="show-hotels" type="submit">Показать</button>
+      <div class="price-controls">
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+      </div>
+
+      <div class="range-controls">
+        <div class="track-container">
+          <div class="track"></div>
+        </div>
+        <div class="range-thumb range-thumb-min"></div>
+        <div class="range-thumb range-thumb-max"></div>
+      </div>
+
+      <button class="show-hotels-btn" type="submit">Показать</button>
     </div>
 
   </div>
@@ -82,15 +95,15 @@
 
   <section class="search-results">
     <h2>Найдено: 3</h2>
-      <ul class="sort-list"><!-- Тут нужно добавить ссылки к трём последним пунктам? Как оформить этот блок? -->
+      <ul class="sort-list">
         <li class="sort-item">Сортировка: </li>
         <li class="sort-item"><a href="#">По цене</a></li>
         <li class="sort-item"><a href="#">По типу</a></li>
         <li class="sort-item"><a href="#">По рейтингу</a></li>
       </ul>
     <div class="dir-icons">
-      <img src="img/icon-up-dir.svg" alt="Сортировать по возрастанию" width="11" height="10">
-      <img src="img/icon-down-dir.svg" alt="Сортировать по уменьшению" width="11" height="10">
+      <button class="icon-up-dir"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 0L0 10h11z"/></svg></button>
+      <button class="icon-down-dir"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#cacaca" d="M5.5 10L0 0h11"/></svg></button>
     </div>
   </section>
 
@@ -154,8 +167,9 @@
   </div>
 </section>
 
-<section class="hotel-item">
-     <img src="img/villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
+<section class="hotel-item"><!--
+     <img src="img/villas.jpg" alt="Villas at Poco Diablo" width="135" height="90"> -->
+     <span class="hotel-item-image villas"></span>
 
       <div class="hotel-item-description">
        <h3 class="hotel-item-title"><a href="#">Villas at Poco Diablo</a></h3>
@@ -185,8 +199,8 @@
   </div>
 </main>
 
-<footer class="main-footer">
-  <div class="containter">
+<footer class="footer">
+  <div class="container">
     <span class="visitsedona">#visitsedona</span>
 
     <div class="footer-buttons">
