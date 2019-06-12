@@ -10,19 +10,19 @@
   <body class="main-page">
   <div class="body-wrapper">
 
-<header class="main-header">
-        <nav class="main-navigation">
-            <ul class="site-navigation">
-              <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
-              <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
-              <li><a href="map.html">КАРТА ШТАТА</a></li>
-              <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
-            </ul>
-          <a class="main-logo"> <!--на всех внутренних страницах должна быть ссылка на логотипе, ведущая на главную страницу. Однако на главной странице логотип должен быть без ссылки.-->
-            <img src="img/logo.svg" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;" width="140" height="72">
-          </a>
-        </nav>
-    </header>
+<header class="header">
+  <nav class="navigation">
+    <a class="main-logo">
+      <img src="img/logo.svg" alt="Логотип сервиса поиска гостиниц &quot;Седона&quot;" width="140" height="72">
+    </a>
+    <ul class="navigation-list">
+      <li><a href="info.html">ИНФОРМАЦИЯ</a></li>
+      <li><a href="photo.html">ФОТО И ВИДЕО</a></li>
+      <li><a href="map.html">КАРТА ШТАТА</a></li>
+      <li><a href="hotels.html">ГОСТИНИЦЫ</a></li>
+    </ul>
+  </nav>
+</header>
 
 <main class="container">
   <section class="introduction-images">
@@ -36,7 +36,7 @@
     </div>
   </section>
 
-  <section class="sedona-advantages"> <!--я добавила этот класс-->
+  <section class="sedona-advantages">
     <div class="city-description">
       <div class="city-description-text">
         <h2>НАСТОЯЩИЙ<br/>ГОРОДОК</h2>
@@ -44,27 +44,20 @@
           <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
       </div>
       <div class="city-description-image">
-          <img src="img/city_description_1.jpg" alt="Седона — настоящий городок" width="800" height="258">
       </div>
     </div>
 
     <div class="features">
       <ul class="city-options">
-      <li option-items><!--
-        <img src="img/icon-1.svg" alt="Жильё иконка" width="75" height="72"> -->
-        <span class="motel-icon"></span>
+      <li option-items motel-icon>
         <h3>ЖИЛЬЁ</h3>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
       </li>
-      <li option-items><!--
-        <img src="img/icon-2.svg" alt="Еда иконка" width="74" height="70"> -->
-        <span class="food-icon"></span>
+      <li option-items food-icon>
         <h3>ЕДА</h3>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
       </li>
-      <li option-items><!--
-        <img src="img/icon-3.svg" alt="Сувениры иконка" width="64" height="76"> -->
-        <span class="souvenir-icon"></span>
+      <li option-items souvenir-icon>
         <h3>СУВЕНИРЫ</h3>
           <p>Не только китайского, но и местного производства!</p>
       </li>
@@ -73,23 +66,22 @@
 
   <div class="devil-bridge">
     <div class="devil-bridge-text">
-      <h2>ТАМ ЕСТЬ<br/> МОСТ ДЬЯВОЛА</h2>
+      <h2>ТАМ ЕСТЬ<br/>МОСТ ДЬЯВОЛА</h2>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
     </div>
     <div class="devil-bridge-image">
-      <img src="img/city_description_2.jpg" alt="Мост дьявола" width="800" height="256">
     </div>
   </div>
 
   <ul class="features-list">
     <li class="features-item">
-        <h3>Небольшая площадь</h3>
+        <h3>Небольшая<br/>площадь</h3>
         <p>— №3 —</p>
         <p>Все достопримечательности находятся очень близко</p>
     </li>
     <li class="features-item">
-        <h3>Красивая дорога</h3>
+        <h3>Красивая<br/>дорога</h3>
         <p>— №4 —</p>
         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
     </li class="features-item">
@@ -110,35 +102,40 @@
 
     <section class="hotel-search-modal">
     <form class="hotel-search-form" action="#" method="get">
-              <fieldset>
-                <p class="date-field">
-                  <label for="arrival-date">Дата заезда:</label>
-                  <button class="calendar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg></button>
-                  <input class="unstyled" type="date" id="arrival-date" name="arrival-date" value="2017-04-24"><!--placeholder или value?-->
-                </p>
-                <p class="date-field">
-                  <label for="departure-date">Дата выезда:</label>
-                  <button class="calendar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></button>
-                  <input class="unstyled" type="date" id="departure-date" name="departure-date" value="2017-06-04"><!--placeholder или value?-->
-                </p>
-                <div class="number-count">
-                <p>
-                  <label for="adults-number">Взрослые:</label>
-                  <button class="plus-icon"></button>
-                  <button class="minus-icon"></button>
-                  <input class="number" type="number" min="0" max="99" step="1" id="adults-number" name="adults-number" value="2">
-                </p>
-                <p class= "children-number">
-                  <label for="children-number">Дети:</label>
-                  <button class="plus-icon"></button>
-                  <button class="minus-icon"></button>
-                  <input class="number" type="number" min="0" max="99" step="1" id="children-number" name="adults-number" value="0">
-                </p>
-                </div>
-              </fieldset>
-              <div class="search-button-field">
-                  <button class="search-button" type="submit" name="search-button">Найти</button>
+      <fieldset>
+        <div class="date-field">
+          <label for="arrival-date">Дата заезда:</label>
+          <input class="unstyled" type="date" id="arrival-date" name="arrival-date" value="2017-04-24"><!--placeholder или value?-->
+          <button class="calendar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></svg></button>
+        </div>
+        <div class="date-field">
+          <label for="departure-date">Дата выезда:</label>
+          <input class="unstyled" type="date" id="departure-date" name="departure-date" value="2017-06-04"><!--placeholder или value?-->
+          <button class="calendar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"><path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/><path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/></button>
+        </div>
+
+        <div class="number-count">
+          <div class="number-container">
+            <label for="adults-number">Взрослые:</label>
+              <div class="adults-imput-wrapper">
+                <span class="minus-icon"></span>
+                <input class="number" type="text" id="adults-number" name="adults-number" value="2">
+                <span class="plus-icon  plus"></span>
               </div>
+          </div>
+          <div class="number-container">
+            <label for="children-number">Дети:</label>
+              <div class="children-imput-wrapper">
+                <span class="minus-icon"></span>
+                <input class="number" type="text" id="children-number" name="children-number" value="0">
+                <span class="plus-icon plus"></span>
+              </div>
+          </div>
+        </div>
+      </fieldset>
+        <div class="search-button-field">
+          <button class="search-button" type="submit" name="search-button">Найти</button>
+        </div>
     </form>
   </section>
 
