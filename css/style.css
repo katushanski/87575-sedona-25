@@ -580,7 +580,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  width: 575px;
+  width: 572px;
   padding: 55px;
   box-sizing: border-box;
 
@@ -924,7 +924,7 @@ body {
   height: 562px;
   width: 1200px;
 
-  background-color: #ffffff;
+  background-color: #81b3d2;
   background-image: url("../img/hotels_background.png");
   background-repeat: no-repeat;
 }
