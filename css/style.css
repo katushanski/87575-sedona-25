@@ -445,7 +445,7 @@ body {
 .features-list {
   display: flex;
   margin: 0;
-  padding: 45px 0 60px;
+  padding: 47px 0 60px;
 
   box-sizing: border-box;
 
@@ -501,7 +501,7 @@ body {
 
 
 .search-container h2 {
-  padding-top: 55px;
+  padding-top: 50px;
   margin: 0;
 
   line-height: 36px;
@@ -511,7 +511,7 @@ body {
 }
 
 .search-container p {
-  padding-top: 35px;
+  padding-top: 25px;
   margin: 0;
 
   line-height: 24px;
@@ -521,7 +521,7 @@ body {
 }
 
 .open-form-button {
-  margin: 43px auto;
+  margin: 45px auto;
   margin-bottom: 0;
   padding: 31px;
   width: 572px;
@@ -556,9 +556,35 @@ body {
   outline: none;
 }
 
+@keyframes dropdown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    transition: transform ease 0.6s;
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes lift-up {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    transition: transform ease 0.6s;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
 .hotel-search-modal {
   z-index: 1;
   display: block;
+  animation-name: dropdown;
+  animation-duration: 0.6s;
   position: relative;
   background-color: #ffffff;
 }
@@ -566,6 +592,8 @@ body {
 .modal-hide {
   z-index: 1;
   display: none;
+  animation-name: lift-up;
+  animation-duration: 0.6s;
   position: relative;
   background-color: #ffffff;
 }
@@ -946,7 +974,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  margin-right: 118px;
+  margin-right: 116px;
   padding: 0;
   border: none;
 
@@ -1023,6 +1051,16 @@ body {
     height: 21px;
 }
 
+
+.infrastructure input[type="checkbox"]:disabled + label:before,
+.accomodation input[type="checkbox"]:disabled + label:before {
+    content: url("../img/checkbox-on.svg");
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    width: 27px;
+    height: 21px;
+}
 /*=================================фильтр-ползунок===================================*/
 
 .filter-range {
