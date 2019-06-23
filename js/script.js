@@ -4,10 +4,10 @@ var form = popup.querySelector("form");
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.toggle("modal-hide");
-});
+  popup.classList.toggle("hide-modal");
+// });
 
-form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  console.log("Отправляем форму");
-});
+// form.addEventListener("submit", function (evt) {
+//   evt.preventDefault();
+//   console.log("Отправляем форму");
+// });
