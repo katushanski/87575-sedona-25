@@ -4,7 +4,7 @@ var form = popup.querySelector("form");
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.toggle("hide-modal");
+  popup.classList.toggle("display-form");
 });
 
 // form.addEventListener("submit", function (evt) {

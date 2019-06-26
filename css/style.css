@@ -270,7 +270,8 @@ body {
 /*==================================================================================================================*/
 
 .sedona-advantages {
-  z-index: 5;
+  z-index: 6;
+  position: relative;
 
   display: -webkit-box;
 
@@ -566,6 +567,7 @@ body {
 /*===================================================ФОРМА==========================================================*/
 
 .hotel-search {
+  z-index: 5;
   position: relative;
   border: none;
   background-color: #ffffff;
@@ -573,6 +575,8 @@ body {
 }
 
 .text {
+  z-index: 5;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,7 +589,6 @@ body {
           justify-content: center;
   background-color: #ffffff;
  }
-
 
 .search-container h2 {
   padding-top: 48px;
@@ -609,6 +612,7 @@ body {
 }
 
 .open-form-button {
+  z-index: 2;
   margin: 45px auto;
   margin-bottom: 0;
   padding: 31px;
@@ -644,82 +648,16 @@ body {
   outline: none;
 }
 
-@-webkit-keyframes dropdown {
-  from {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    -webkit-transition: -webkit-transform ease 0.6s;
-    transition: -webkit-transform ease 0.6s;
-    -o-transition: transform ease 0.6s;
-    transition: transform ease 0.6s;
-    transition: transform ease 0.6s, -webkit-transform ease 0.6s;
-  }
-  to {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes dropdown {
-  from {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    -webkit-transition: -webkit-transform ease 0.6s;
-    transition: -webkit-transform ease 0.6s;
-    -o-transition: transform ease 0.6s;
-    transition: transform ease 0.6s;
-    transition: transform ease 0.6s, -webkit-transform ease 0.6s;
-  }
-  to {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes lift-up {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: -webkit-transform ease 0.6s;
-    transition: -webkit-transform ease 0.6s;
-    -o-transition: transform ease 0.6s;
-    transition: transform ease 0.6s;
-    transition: transform ease 0.6s, -webkit-transform ease 0.6s;
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
-@keyframes lift-up {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    -webkit-transition: -webkit-transform ease 0.6s;
-    transition: -webkit-transform ease 0.6s;
-    -o-transition: transform ease 0.6s;
-    transition: transform ease 0.6s;
-    transition: transform ease 0.6s, -webkit-transform ease 0.6s;
-  }
-  to {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-}
-
 .hotel-search-modal {
   z-index: 1;
   display: block;
-  -webkit-animation-name: dropdown;
-          animation-name: dropdown;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
   position: relative;
   background-color: #ffffff;
 }
 
 .hotel-search-form {
+  display: none;
+  z-index: -1;
   position: absolute;
   left: 0;
   right: 0;
@@ -745,17 +683,29 @@ body {
   background-color: #ffffff;
   -webkit-box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.15);
           box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.15);
-}
 
-.hide-modal {
-  z-index: 1;
-  display: none;
+  transform: translateY(-100%);
+  transition: transform ease 0.6s;
+/*
   -webkit-animation-name: lift-up;
           animation-name: lift-up;
   -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  position: relative;
+          animation-duration: 0.6s;*/
+}
+
+.display-form {
+  z-index: 1;
+  display: block;
+  position: absolute;
   background-color: #ffffff;
+
+  transform: translateY(0);
+  transition: transform ease 0.6s;
+/*
+  -webkit-animation-name: dropdown;
+          animation-name: dropdown;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;*/
 }
 
 .hotel-search-form fieldset {
@@ -863,7 +813,6 @@ body {
   height: 22px;
   padding: 0;
   border: none;
-  outline: none;
 
   background-color: transparent;
 }
@@ -878,7 +827,6 @@ body {
 
 .calendar-icon:active svg {
   fill: #81b3d2;
-  outline: #4D90FE solid 3px;
 }
 
 .unstyled::-webkit-inner-spin-button,
@@ -1065,7 +1013,7 @@ label.children-number {
   content: "";
   position: absolute;
   top: 18px;
-  right: 13px;
+  right: 14px;
 
   display: block;
   width: 11px;
@@ -1288,6 +1236,12 @@ label.children-number {
 .infrastructure label:focus,
 .accomodation label:focus {
   outline: #4D90FE solid 3px;
+  user-select: auto;
+}
+
+.infrastructure input:focus ~ label,
+.accomodation input:focus ~ label {
+  outline: 2px solid #4D90FE;
 }
 
 .infrastructure-list,
