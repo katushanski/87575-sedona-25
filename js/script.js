@@ -1,5 +1,5 @@
 var button = document.querySelector(".open-form-button");
-var popup = document.querySelector(".hotel-search-modal");
+var popup = document.querySelector(".hotel-search-form");
 var form = popup.querySelector("form");
 
 button.addEventListener("click", function (evt) {
