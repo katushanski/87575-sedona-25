@@ -132,7 +132,10 @@ body {
   color: #b2b2b2;
 }
 
-.navigation-list a:active,
+.navigation-list a:active {
+  color: #b2b2b2;
+}
+
 .navigation-list .active {
   color: #7f6d62;
 }
@@ -182,7 +185,7 @@ body {
   bottom: -2px;
   left: 0;
 
-  width: 1201px;
+  width: 100%;
   height: 59px;
 }
 
@@ -650,7 +653,7 @@ body {
 
 .hotel-search-modal {
   z-index: 1;
-  display: block;
+  display: flex;
   position: relative;
   background-color: #ffffff;
 }
@@ -686,11 +689,6 @@ body {
 
   transform: translateY(-100%);
   transition: transform ease 0.6s;
-/*
-  -webkit-animation-name: lift-up;
-          animation-name: lift-up;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;*/
 }
 
 .display-form {
@@ -701,11 +699,6 @@ body {
 
   transform: translateY(0);
   transition: transform ease 0.6s;
-/*
-  -webkit-animation-name: dropdown;
-          animation-name: dropdown;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;*/
 }
 
 .hotel-search-form fieldset {
@@ -755,6 +748,7 @@ body {
           box-sizing: border-box;
 
   width: 347px;
+  min-height: 38px;
   padding: 6px 12px;
   padding-right: 30px;
   margin-left: auto;
@@ -769,7 +763,6 @@ body {
        appearance: textfield;
   rtl-ordering: logical;
 }
-
 
 .date-field input[type="text"]::-webkit-input-placeholder {
   color: #000000;
@@ -815,6 +808,10 @@ body {
   border: none;
 
   background-color: transparent;
+}
+
+.date-field .calendar-icon:active {
+  outline: none;
 }
 
 .calendar-icon svg {
@@ -912,6 +909,7 @@ label.children-number {
 
 .number-container input {
   width: 114px;
+  min-height: 38px;
   margin: 0;
   padding: 6px 20px;
   -webkit-box-sizing: border-box;
@@ -971,6 +969,7 @@ label.children-number {
 .number-container input[type="text"]:focus:-ms-input-placeholder {
   color: transparent;
 }
+
 .number-container .minus-icon {
   position: absolute;
   top: 0;
@@ -1036,6 +1035,11 @@ label.children-number {
           transform: rotate(90deg);
 }
 
+.minus-icon:active,
+.plus-icon:active {
+  outline: none;
+}
+
 .minus-icon:hover::before {
   background-color: #000000;
 }
@@ -1095,7 +1099,7 @@ label.children-number {
 /*=======================================================================================================================*/
 
 .map {
-  display: block;
+  display: flex;
   height: 595px;
 
   background-color: #ffffff;
@@ -1141,6 +1145,7 @@ label.children-number {
 .search-preferences-background {
   position: absolute;
   z-index: 0;
+  top: -50px;
   right: 0;
 
   padding: 0;
@@ -1233,15 +1238,15 @@ label.children-number {
           box-sizing: border-box;
 }
 
-.infrastructure label:focus,
-.accomodation label:focus {
-  outline: #4D90FE solid 3px;
-  user-select: auto;
+
+.infrastructure input:focus ~ label:before,
+.accomodation input:focus ~ label:before {
+  outline: 2px solid #4D90FE;
 }
 
-.infrastructure input:focus ~ label,
-.accomodation input:focus ~ label {
-  outline: 2px solid #4D90FE;
+.infrastructure input:active ~ label:before,
+.accomodation input:active ~ label:before {
+  outline: none;
 }
 
 .infrastructure-list,
@@ -1330,7 +1335,11 @@ label.children-number {
 
 .price-controls {
   position: relative;
-  height: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
   margin-bottom: 20px;
 
   border: 2px solid #ffffff;
@@ -1355,10 +1364,8 @@ label.children-number {
 .price-controls label {
   display: inline-block;
 
-  width: 90px;
-  padding-top: 5px;
-  padding-bottom: 7px;
-  padding-left: 38px;
+  width: 91px;
+  padding-left: 31px;
 
   font-size: 14px;
   line-height: 21px;
@@ -1367,7 +1374,7 @@ label.children-number {
 }
 
 .price-controls .min-price {
-  padding-right: 10px;
+  padding-right: 25px;
 }
 
 .price-controls input {
@@ -1421,7 +1428,7 @@ label.children-number {
 }
 
 .range-thumb-max {
-  left: 80%;
+  left: 79%;
 }
 
 .range-thumb:hover {
@@ -1431,8 +1438,9 @@ label.children-number {
 
 .show-hotels-btn {
   display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+  margin-right: auto;
+  margin-left: 82px;
+  padding: 5px 35px;
 
   font-size: 14px;
   line-height: 21px;
@@ -1448,6 +1456,7 @@ label.children-number {
 .show-hotels-btn:hover {
   color: #000000;
   background: #ffffff;
+  outline: none;
 }
 /*=======================================================================================================================================*/
 .search-results {
@@ -1610,7 +1619,7 @@ label.children-number {
       -ms-flex-direction: row;
           flex-direction: row;
 
-  padding: 30px 0;
+  padding: 30px 0 29px;
 
   border-bottom: 1px solid #e5e5e5;
   text-transform: uppercase;
@@ -1888,7 +1897,7 @@ h3.hotel-item-title {
       flex-wrap: wrap;
 
   width: 1200px;
-  padding: 37px 73px;
+  padding: 37px 0;
   margin-top: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1913,7 +1922,7 @@ h3.hotel-item-title {
   display: -ms-flexbox;
 
   display: flex;
-  padding: 37px 73px;
+  padding: 37px 0;
   margin-top: 0;
 
   line-height: 26px;
@@ -1933,10 +1942,13 @@ h3.hotel-item-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 33.3%;
   height: 50px;
   margin: 0;
-  margin-right: 98px;
-  padding: 0 35px 0 60px;
+  padding: 0;
 
   -webkit-box-sizing: border-box;
 
@@ -1944,19 +1956,23 @@ h3.hotel-item-title {
 }
 
 .visitsedona {
+  display: flex;
   font-size: 21px;
   font-weight: bold;
  }
 
 .footer-buttons {
-  width: 400px;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: flex;
+  justify-content: center;
+
+  width: 33.3%;
   padding: 0;
   margin: 0;
 
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+        align-items: center;
   list-style: none;
 }
 
@@ -1966,8 +1982,13 @@ h3.hotel-item-title {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
   margin: 0;
-  padding: 0 121px;
+  padding: 0;
 
   list-style: none;
 }
@@ -2035,17 +2056,19 @@ h3.hotel-item-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 39px;
+  justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
+  width: 33.3%;
+  height: 39px;
   margin: 4px 0;
-  margin-left: auto;
 
 }
 
 .website-by span {
-  display: inline-block;
+  display: block;
   margin: 0;
   margin-right: 8px;
   padding: 0;
@@ -2074,7 +2097,6 @@ h3.hotel-item-title {
   width: 115px;
   margin: 0;
   padding: 0;
-  padding-right: 28px;
 
   vertical-align: middle;
   fill: #000000;
