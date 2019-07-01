@@ -11,9 +11,3 @@ form.addEventListener("submit", function (evt) {
   evt.preventDefault();
   console.log("Отправляем форму");
 });
-
-filterForm.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  console.log("Отправляем форму фильтра");
-});
-
